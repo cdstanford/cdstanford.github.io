@@ -1,0 +1,89 @@
+/*@font-face {
+	font-family: 'header';
+	src: url('zekton.ttf');
+}
+
+@font-face {
+	font-family: 'text';
+	src: url('Raleway-Regular.ttf');
+}*/
+
+body {
+	min-width:1080px;
+	background-color:	#DCDCDC;
+	background: -webkit-linear-gradient(left,#FAF0E6,#F08080,#FAF0E6); /*Safari 5.1-6*/
+	background: -o-linear-gradient(right,#FAF0E6,#F08080,#FAF0E6); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(right,#FAF0E6,#F08080,#FAF0E6); /*Fx 3.6-15*/
+	background: linear-gradient(to right,#FAF0E6,#F08080,#FAF0E6); /*Standard*/
+	background-attachment:fixed;
+
+	color:black;
+	font-family:text;
+}
+
+div.main_container {
+	min-width:700px;
+	width:65%;
+	max-width:1400px;
+	margin:20px auto 40px auto;
+	padding:0px;
+	padding-top:0px;
+	background-color: white;
+	/*Border*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:2px solid black;
+}
+
+/*I don't know what this does*/
+div.main_container:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family:header;
+}
+
+div.nav_bar {
+	border-top: medium solid #111111;
+	border-bottom: medium solid #111111;
+	text-align:center;
+	width:100%;
+	background-color: #FFFFF0;
+	font-size:18pt;
+	min-width:540px;
+	margin:0px auto 15px auto;
+	font-family:header;
+}
+
+div.main_text {
+	padding:20px;
+	padding-top:0px;
+	padding-bottom:20px;
+}
+
+a {
+	color: #483D8B;
+}
+
+span.nav {
+	padding:2px 4.5%;
+	margin:0px;
+	display:inline-block;
+	color:#4B0082;
+}
+
+span.nav:hover {
+	color:#E6E6FA;
+	background-color:#111111;
+	cursor:pointer;
+}
+
+a > span.nav {
+  color: #111111;
+}
