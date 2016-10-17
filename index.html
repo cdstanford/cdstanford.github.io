@@ -1,31 +1,43 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Caleb Stanford</title>
-		<link rel="stylesheet" type="text/css" href="./cdstanford.css">
-	</head>
-	<body>
-		<!-- <div class="head_container">
-			<img src="head.png" />
-		</div> -->
-		<div class="main_container">
-			<!-- <div class="bannerimg"><div class="bannercontent" id="flag">
-				<h1 class="title"></h1>
-				<h2 class="title">The Next Generation</h2>
-			</div></div> -->
-			<div class="nav_bar">
-				<span class="nav">Home</span>
-				<a href="blog.html"><span class="nav">Blog</span></a>
-				<a href="projects.html"><span class="nav">Projects</span></a>
-				<a href="about.html"><span class="nav">About</span></a>
-			</div>
-			<div class="main_text">
-				<h3>Home</h3>
-				<p>
-					Coming soon!
-				</p>
-			</div>
-		</div>
-	</body>
-</html>
+---
+layout: default
+title: Blog
+description: Overwrite text?
+---
+
+<!-- Show last 5 posts here -->
+{% for post in site.posts %}
+	<article>
+
+        <header>
+            <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span><br/> -->
+            <span class="author"><i class="icon-user"></i> {% if post.author %}{{post.author}}{% else %}{{site.author}}{% endif%}</span>
+        </header>
+
+		<div class="entry">{{ post.excerpt }}</div>
+
+	</article>
+{% endfor %}
+
+
+<!-- <div id="paginator">
+    {% if paginator.next_page %}
+            <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+            &laquo; Older Posts</a>
+    {% endif %}
+
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+                <span class="more">
+                <a href="{{site.baseurl}}/">
+                Newer Posts &raquo; </a>
+                </span>
+        {% else %}
+                <span class="more">
+                <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
+                Newer Posts &raquo; </a>
+                </span>
+        {% endif %}
+    {% endif %}
+</div> -->
