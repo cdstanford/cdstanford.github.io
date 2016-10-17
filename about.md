@@ -12,7 +12,7 @@ I graduated from Brown University in May 2016 (Sc.B Mathematics Computer Science
 
 Here is my [CV](/doc/CV.pdf) (out of date, I'll update it soon).
 
-**Research interests.** In no particular order: formal verification, type systems, nonclassical logic (especially modal logics), automata theory, structural complexity theory. In general, I am interested in the applications of mathematical logic (e.g. finite model theory, set theory) to programming languages and verification. This list is incomplete.
+**Research interests:** In no particular order: formal verification, type systems, nonclassical logic (especially modal logics), automata theory. I am also interested in applying ideas from structural complexity theory, descriptive complexity theory, and finite model theory to problems in programming languages and verification. This list is incomplete.
 
 I attend the [Penn PL Club](http://www.cis.upenn.edu/~plclub/).
 

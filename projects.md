@@ -14,10 +14,10 @@ they are [here](/doc/brown-capstone-files.zip).
 
 - **Model theory (spring 2015)**
 
-  With a group of 8 other students, I ran a group independent study project (GISP) course on Model Theory, in spring 2016.
-The website for that course can be found [here](https://sites.google.com/a/brown.edu/model-theory-spring-2015).
+  With a group of 8 other students, I ran a group independent study project (GISP) on model theory, in the spring semester of 2016.
+The website for the class can be found [here](https://sites.google.com/a/brown.edu/model-theory-spring-2015).
 
-  Here are some of the notes I wrote for that course:
+  Here are some of the notes I wrote for the class:
 
   - [Notes on natural deduction](/doc/2015 model theory/lecture-8.pdf)
 
@@ -25,4 +25,4 @@ The website for that course can be found [here](https://sites.google.com/a/brown
 
   - [Notes on ultrapowers](/doc/2015 model theory/lecture-25.pdf)
 
-  (The notes are mostly, but not entirely, free of errors.)
+  (The notes are not entirely free of errors.)
