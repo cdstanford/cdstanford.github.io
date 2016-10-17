@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First post
-category: Meta
+fbcomments: yes
 
 ---
 

@@ -12,6 +12,13 @@ layout: default
 
         <div class="entry">{{ content }}</div>
 
+        {% include facebook-comments.html %}
+        {% if page.fbcomments %}
+          <hr/>
+          <h4>Comments</h4>
+          <div class="fb-comments" data-href="{{site.baseurl}}{{ page.url }}" data-colorscheme="dark" data-num-posts="10" data-width="706"></div>
+        {% endif %}
+
         <footer><!-- additional info --></footer>
 
 </article>

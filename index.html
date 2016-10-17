@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Blog
-description: Overwrite text?
+title: Home
+description: (No description)
 ---
 
 <!-- Show last 5 posts here -->
@@ -16,6 +16,13 @@ description: Overwrite text?
         </header>
 
 		<div class="entry">{{ post.excerpt }}</div>
+
+		{% include facebook-comments.html %}
+        {% if post.fbcomments %}
+          <hr/>
+          <h4>Comments</h4>
+          <div class="fb-comments" data-href="{{site.baseurl}}{{ post.url }}" data-colorscheme="dark" data-num-posts="5" data-width="706"></div>
+        {% endif %}
 
 	</article>
 {% endfor %}

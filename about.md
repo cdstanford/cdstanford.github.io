@@ -8,9 +8,9 @@ title: About
 ## About Me
 
 Since Fall 2016, I am a PhD student in Computer Science at the University of Pennsylvania.
-I graduated from Brown University in May 2016 (Sc.B Mathematics Computer Science.)
+I graduated from Brown University in May 2016 (ScB Mathematics - Computer Science.)
 
-Here is my [CV](/doc/CV.pdf) (out of date, I'll update it soon).
+Here is my [CV](/doc/CV.pdf).
 
 **Research interests:** In no particular order: formal verification, type systems, nonclassical logic (especially modal logics), automata theory. I am also interested in applying ideas from structural complexity theory, descriptive complexity theory, and finite model theory to problems in programming languages and verification. This list is incomplete.
 
