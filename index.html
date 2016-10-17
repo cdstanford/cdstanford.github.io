@@ -20,6 +20,7 @@ description: (No description)
 		{% include facebook-comments.html %}
         {% if post.fbcomments %}
           <h4>Comments</h4>
+
           <div class="fb-comments" data-href="{{ site.url }}{{ post.url }}" data-colorscheme="dark" data-num-posts="5" data-width="706"></div>
         {% endif %}
 
