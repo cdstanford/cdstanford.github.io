@@ -2,6 +2,7 @@ node_modules
 validation-report.json
 validation-status.json
 _site/
+_drafts/
 .sass-cache/
 .jekyll-metadata
 README.md
