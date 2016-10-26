@@ -2,7 +2,6 @@
 layout: post
 title: First post
 fbcomments: yes
-
 ---
 
 Today, October 16, 2016, marks the day I finally get a simple website and blog up and running. :)

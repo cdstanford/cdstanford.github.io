@@ -42,3 +42,7 @@ permalink: pretty
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+
+# Override the default excerpt behavior by customizing the excerpt separator.
+excerpt_separator: <!--EXCERPT TO HERE-->
+# Now the excerpt will be the entire post, unless the above is included.
