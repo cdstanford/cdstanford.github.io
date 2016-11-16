@@ -2,6 +2,10 @@
 layout: post
 title: "Uncomputable binary relations"
 fbcomments: yes
+tags:
+- math
+- computability
+- model-theory
 ---
 
 Consider a binary relation $$R$$ on a countable set $$S$$, i.e. $$R \subseteq S \times S$$.

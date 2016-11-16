@@ -12,11 +12,17 @@ description: (No description)
             <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span><br/> -->
-            <span class="author"><i class="icon-user"></i> {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span>
-
+            <span class="author"><i class="icon-user"></i> {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span><br/>
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				{% for post_tag in post.tags %}
+				<a href="{{ site.baseurl }}/tags">{{ post_tag }}</a> <!-- no # in the link for now -->
+				<!-- <a href="{{ site.baseurl }}tags/#{{post_tag}}">{{ post_tag }}</a> --> <!-- getting this to work would be most ideal -->
+				{% endfor %}
+			</span>
 			<!-- Facebook comments count. -->
 			{% include facebook-comments.html %}
-			<span class="comments"><i class="icon-comment"></i> {% if post.fbcomments %} Comments: <a href={{ site.url }}{{ post.url }}><span class="fb-comments-count" data-href={{ site.url }}{{ post.url }}>0</span></a>{% endif %}</span>
+			<span class="comments"><i class="icon-comment"></i> {% if post.fbcomments %} Comments: <a href={{ site.baseurl }}{{ post.url }}><span class="fb-comments-count" data-href={{ site.url }}{{ post.url }}>0</span></a>{% endif %}</span>
 
         </header>
 

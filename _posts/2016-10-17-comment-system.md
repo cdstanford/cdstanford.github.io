@@ -2,6 +2,9 @@
 layout: post
 title: Day 2&#58; Facebook comments
 fbcomments: yes
+tags:
+- boring
+- blog-setup
 ---
 
 I set up this blog to work with Facebook comments, using the advice [here](https://joshuacox.github.io/jekyll/2015/11/28/facebook-comments-and-jekyll/).

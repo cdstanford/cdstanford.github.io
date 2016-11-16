@@ -2,6 +2,9 @@
 layout: post
 title: "\"I'm moving to Canada\""
 fbcomments: yes
+tags:
+- politics
+- random-facts
 ---
 
 "If Donald Trump wins this election, I'm moving to Canada."

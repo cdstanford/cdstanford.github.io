@@ -2,6 +2,9 @@
 layout: post
 title: First post
 fbcomments: yes
+tags:
+- boring
+- blog-setup
 ---
 
 Today, October 16, 2016, marks the day I finally get a simple website and blog up and running. :)
