@@ -59,7 +59,7 @@ In other words, all vertices outside of $$S_0$$ are indistinguishable from each 
 any vertex is either connected to all of $$S \setminus S_0$$, or none of $$S \setminus S_0$$.
 
 An equivalent way of saying the above condition is that there is a
-quantifier-free formula $$\varphi(x,y)$ over the language of equality and allowing constants from
+quantifier-free formula $$\varphi(x,y)$$ over the language of equality and allowing constants from
 $$S$$, that defines $$R$$. I.e., $$xRy$$ if and only if $$\varphi(x,y)$$.
 
 On the other hand, there are uncountably many relations of type (2) (for silly reasons), but there are only countably many *non-isomorphic* relations of type (2).
