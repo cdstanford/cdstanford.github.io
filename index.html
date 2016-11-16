@@ -21,8 +21,10 @@ description: (No description)
 				{% endfor %}
 			</span>
 			<!-- Facebook comments count. -->
-			{% include facebook-comments.html %}
-			<span class="comments"><i class="icon-comment"></i> {% if post.fbcomments %} Comments: <a href="{{ site.url }}{{ post.url }}"><span class="fb-comments-count" data-href={{ site.url }}{{ post.url }}>0</span></a>{% endif %}</span>
+			<!-- Being stupid. Disabling for now. -->
+			<!-- {% include facebook-comments.html %}
+			<span class="comments"><i class="icon-comment"></i> {% if post.fbcomments %} Comments:
+		 	<a href="{{ site.url }}{{ post.url }}"><span class="fb-comments-count" data-href={{ site.url }}{{ post.url }}>0</span></a>{% endif %}</span> -->
 
         </header>
 
