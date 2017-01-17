@@ -29,7 +29,7 @@ Some examples should make this classification more clear:
 
   $$R = \{(a,y) \mid y \in S\}.$$
 
-  This is a relation of type (1), because no matter how we represent vertices as binary strings, $$a$$ is some particular string, and we can decide if $$xRy$$ by just checking if $$x = a$$.
+  This is a relation of type (1), because no matter how we represent vertices as natural numbers, $$a$$ is some particular number, and we can decide if $$xRy$$ by just checking if $$x = a$$.
 
 - Let $$S = \mathbb{N}$$, with
 
@@ -72,4 +72,5 @@ Since [the number of non-isomorphic countable graphs is $$2^{\aleph_0}$$](http:/
 Although we can't construct one explicitly,
 it turns out that [any countable model of ZFC is of type (3)](http://mathoverflow.net/questions/12426/is-there-a-computable-model-of-zfc).
 (In this case $$S$$ is the underlying set of the model, and $$R$$ is the "is an element of" binary relation.)
-In contrast, the standard model of Peano Arithmetic is entirely computable -- successor, addition, and multiplication are all computable functions on the natural numbers.
+In contrast, the standard model of Peano Arithmetic is entirely computable -- successor, addition, and multiplication are all computable relations (or computable functions, it doesn't matter) on the natural numbers -- so PA has a model of type (2).
+This is one way that ZFC is measurably more complex than a theory like PA.
