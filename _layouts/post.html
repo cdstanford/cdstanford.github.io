@@ -6,9 +6,10 @@ layout: default
         <header>
             <h2>{{ page.title }}</h2>
             <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
-            {% if page.lastedit %}
+            <!-- Icon for last edited. Decided to move this to the bottom instead. -->
+            <!-- {% if page.lastedit %}
                 <span><i class="icon-clock"></i><time datetime="{{page.lastedit|date:"%F"}}">{{page.lastedit|date:"%b %d, %Y"}}</time></span><br/>
-            {% endif %}
+            {% endif %} -->
             <!-- <span class="author"><i class="icon-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span></br> --> <!-- Uncomment if I ever decide I want multiple authors -->
             <!-- <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
             <!-- Tags -->
