@@ -11,8 +11,6 @@ tags:
 
 According to [a recent poll](http://www.businessinsider.com/poll-half-republicans-reject-rigged-election-clinton-wins-2016-10), Democrats are three times as likely to say they would leave the country if their candidate loses.
 
-----
-
 *Sanity check: [Google searches for moving to canada](https://www.google.com/trends/explore?date=all&q=move%20to%20canada,moving%20to%20canada) do seem to have strong political correlation -- the huge spikes occur at Bush's reelection in 2004,
 and at Super Tuesday in the 2016 primaries. But the consensus from [articles][1] [on the][2] [subject][3] is that that actual moves to Canada do not really go up.*
 

@@ -4,11 +4,11 @@ title: About Me
 lastedit: 2017-03-08
 ---
 
-![me](/img/face.jpg){:height="145px" title="Me" alt="Image of Me"}
+![me]({{site.baseurl}}/img/face.jpg){:height="145px" title="Me" alt="Image of Me"}
 
 Since Fall 2016, I am a PhD student in Computer Science at the University of Pennsylvania.
 I graduated from Brown University in May 2016 (ScB Mathematics - Computer Science.)
-Here is my [CV](/doc/Caleb Stanford CV.pdf).
+Here is my [CV]({{site.baseurl}}/doc/Caleb Stanford CV.pdf).
 
 ## Research Interests
 
@@ -16,11 +16,11 @@ Formal verification, automata theory, nonclassical logic (especially modal logic
 
 I attend the [Penn PL Club](http://www.cis.upenn.edu/~plclub/).
 
-![me](/img/plclub-logo.svg){:height="100px" title="Penn PL Club" alt="Penn PL Club"}
+![me]({{site.baseurl}}/img/plclub-logo.svg){:height="100px" title="Penn PL Club" alt="Penn PL Club"}
 
 ## Me Elsewhere
 
-[![Utah Math Olympiad](/img/UMO Dark Blue--crop.jpg){:height="100px" title="Utah Math Olympiad" alt="Utah Math Olympiad"}](http://www.utmath.org)
+[![Utah Math Olympiad]({{site.baseurl}}/img/UMO Dark Blue--crop.jpg){:height="100px" title="Utah Math Olympiad" alt="Utah Math Olympiad"}](http://www.utmath.org)
 
 <a href="http://math.stackexchange.com/users/68107/6005">
 <img src="http://math.stackexchange.com/users/flair/68107.png?theme=dark" height="50px" alt="profile for 6005 at Mathematics Stack Exchange" title="profile for 6005 at Mathematics Stack Exchange">
@@ -32,7 +32,7 @@ I attend the [Penn PL Club](http://www.cis.upenn.edu/~plclub/).
 </a> -->
 
 <a href="http://math.jhu.edu/~savitt/GTM.html">
-<img src="/img/maclane.jpg" width="90" alt="What Springer-Verlag Graduate Text in Mathematics are you?" title="What Springer-Verlag Graduate Text in Mathematics are you?">
+<img src="{{site.baseurl}}/img/maclane.jpg" width="90" alt="What Springer-Verlag Graduate Text in Mathematics are you?" title="What Springer-Verlag Graduate Text in Mathematics are you?">
 </a>
 
 <!-- Full thing -->
