@@ -8,6 +8,9 @@ body {
     padding-left: 50px;
     padding-right: 20%;
 }
+/*body a {
+    text-decoration: none;
+}*/
 
 /* Header color, i.e. my name */
 body>header h1>a {
@@ -170,14 +173,24 @@ section address {
 #paginator {
     padding: 10px;
 }
-
 #paginator a {
     text-decoration: none;
 }
 
-.more {
-    margin-left: 80%;
+.prevlink {
+    /*display: inline-block;*/
+    float: left;
+    margin-bottom: 20px;
 }
+.nextlink {
+    /*display: inline-block;*/
+    float: right;
+    margin-bottom: 20px;
+    /*margin-left: 70%;*/
+    /*margin-left: 80%;*/
+}
+
+
 
 /* TODO: make a section for the <span class="comments">. */
 /* TODO: make another section for the <div class="footnote"> ? */
