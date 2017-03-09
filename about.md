@@ -18,11 +18,6 @@ I attend the [Penn PL Club](http://www.cis.upenn.edu/~plclub/).
 
 ![me](/img/plclub-logo.svg){:height="100px" title="Penn PL Club" alt="Penn PL Club"}
 
-
-
-
-<!-- . -->
-
 ## Me Elsewhere
 
 [![Utah Math Olympiad](/img/UMO Dark Blue--crop.jpg){:height="100px" title="Utah Math Olympiad" alt="Utah Math Olympiad"}](http://www.utmath.org)

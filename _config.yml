@@ -48,3 +48,6 @@ exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffe
 # Override the default excerpt behavior by customizing the excerpt separator.
 excerpt_separator: <!--EXCERPT TO HERE-->
 # Now the excerpt will be the entire post, unless the above is included.
+
+# Google analytics
+google_analytics: UA-93362615-1
