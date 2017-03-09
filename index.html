@@ -4,15 +4,17 @@ title: Home
 description: (No description)
 ---
 
-<!-- Show last 5 posts here -->
-{% for post in site.posts %}
+<!-- Show last n posts here -->
+<!-- Using paginator! -->
+<!-- n is the 'paginate' value in _config.yml -->
+{% for post in paginator.posts %}
 	<article>
 
         <header>
             <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span><br/> -->
-            <span class="author"><i class="icon-user"></i> {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span><br/>
+            <!-- <span class="author"><i class="icon-user"></i> {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
 			<!-- Tags -->
 			<span class="tags"><i class="icon-tag"></i>
 				{% for post_tag in post.tags %}
@@ -40,24 +42,23 @@ description: (No description)
 	</article>
 {% endfor %}
 
-
-<!-- <div id="paginator">
-    {% if paginator.next_page %}
-            <a href="{{site.baseurl}}/page{{paginator.next_page}}">
-            &laquo; Older Posts</a>
-    {% endif %}
-
-    {% if paginator.previous_page %}
+<!-- Paginator navigation links -->
+<div id="paginator">
+	{% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
-                <span class="more">
                 <a href="{{site.baseurl}}/">
-                Newer Posts &raquo; </a>
-                </span>
+                &laquo; Newer Posts </a>
         {% else %}
-                <span class="more">
                 <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
-                Newer Posts &raquo; </a>
-                </span>
+                &laquo; Newer Posts </a>
         {% endif %}
     {% endif %}
-</div> -->
+
+	<!-- "more" span class makes it flush right. -->
+	{% if paginator.next_page %}
+			<span class="more">
+            <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+            Older Posts &raquo;</a>
+			</span>
+    {% endif %}
+</div>

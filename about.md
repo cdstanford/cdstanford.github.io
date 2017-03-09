@@ -1,18 +1,16 @@
 ---
-layout: default
-title: About
+layout: page
+title: About Me
+lastedit: 2017-03-07
 ---
 
 ![me](/img/face.jpg){:height="145px" width="105px"}
 
-## About Me
-
 Since Fall 2016, I am a PhD student in Computer Science at the University of Pennsylvania.
 I graduated from Brown University in May 2016 (ScB Mathematics - Computer Science.)
+[Here is my CV.](/doc/Caleb Stanford CV.pdf)
 
-Here is my [CV](/doc/Caleb Stanford CV.pdf).
-
-**Research interests:** In no particular order: formal verification, type systems, nonclassical logic (especially modal logics), automata theory. I am also interested in applying ideas from structural complexity theory, descriptive complexity theory, and finite model theory to problems in programming languages and verification. This list is incomplete.
+**Research interests:** formal verification, automata theory, nonclassical logic (especially modal logics). I am also interested in applications of complexity theory and finite model theory to programming languages and verification. This list is incomplete.
 
 I attend the [Penn PL Club](http://www.cis.upenn.edu/~plclub/).
 

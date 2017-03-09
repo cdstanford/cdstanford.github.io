@@ -2,6 +2,7 @@
 layout: post
 title: "Uncomputable binary relations"
 fbcomments: yes
+lastedit: 2017-01-05
 tags:
 - math
 - computability

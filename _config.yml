@@ -37,9 +37,10 @@ permalink: pretty
 
 # How many articles do you wish to appear on the front page:
 ## Pagination sucks! It doesn't work anywhere except index.html. How silly.
-# gems: [jekyll-paginate]
-# paginate: 5
-# paginate_path: "page:num"
+## But I still need it, so oh well....
+gems: [jekyll-paginate]
+paginate: 3
+paginate_path: "page:num"
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]

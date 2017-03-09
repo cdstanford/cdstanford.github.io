@@ -1,139 +1,171 @@
+/* Entire page settings */
 body {
-    font-size: 12px;
+    /*background-color: white; */
+    font-size: 13px;
     font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
-    color:#564b47;
+    /*font-family: Georgia, serif;*/
+    color: black;
     padding-left: 50px;
     padding-right: 20%;
 }
 
+/* Header color, i.e. my name */
 body>header h1>a {
-    color:#564b47;
-    text-decoration: none;
+    /*color: #b000c0;*/
+    /*color: #b00080;*/
+    color: #a00060;
+    font-family: Georgia, serif;
+    /*font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;*/
+    /* Originally 564b47 -- black with a tint of orange */
+    text-decoration: none; /* Remove underlines */
 }
-
-body>header h4 {
-    margin-top: -10px;
+/* Other header settings */
+h1,h2 {
+    font-family: Georgia, serif;
 }
-
 h1,h2,h3,h4 {
     width: 100%;
     min-width: 840px;
 }
+body>header h4 {
+    margin-top: -10px;
+}
+
+/*h1,h2,h3,h4 {
+    width: 100%;
+    min-width: 840px;
+}*/
 
 hr {
     margin-left: 0;
     padding-left: 0;
-	width: 100%;
+	width: 80%;
 	min-width: 840px;
+    height: 1px;
+    color: #909090; /* I think this does nothing on modern browsers */
+    background-color: #909090;
 }
 
+/* pre for pre-formatted text, code for code blocks. */
+/* See http://stackoverflow.com/questions/4611591/code-vs-pre-vs-samp-for-inline-and-block-code-snippets */
 pre {
     background-color: #E8E8E8;
     margin-left: 30px;
     padding: 5px;
     width: 80%;
 }
-
 code {
-    background-color: #E8E8E8;
+    background-color: #E8E8E8; /* Light gray */
     padding-left: 3px;
     padding-right: 3px;
 }
 
-pre {
-    background-color: #E8E8E8;
-    margin-left: 30px;
-    padding: 5px;
-    width: 80%;
-}
-
+/* Tables */
 table {
     border: none;
+    /*text-align: center;*/
 }
-
+/*tr {
+    border-bottom: 1px solid #CCC;
+}*/
+/*th {
+    text-align: center;
+}*/
+/* Doesn't seem to work: */
+/*tr:first-child {
+    border-bottom: 2px solid #AAA;
+}*/
 td {
     padding-left: 20px;
 }
 
+/* LINK HOVER */
 a:hover {
+    /*color: #C0C;*/
     color: #696969;
 }
 
+/* MAIN PAGE BODY:
+   The main body of the page, i.e. excluding top header, nav panel, and bottom footer */
 main {
-
 	width: 75%;
 	min-width: 600px;
 	margin-left: 150px;
 	display: block;
 }
 
+/* NAVIGATION PANEL */
 nav {
+    font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+    /*font-family: Georgia, serif;*/
+    font-size: 14px;
 	float: left;
 	width: 150px;
 	min-width: 150px;
+    height: 300px;
 }
-
+nav h3 {
+    /*font-style: oblique;*/
+    font-family: Georgia, serif;
+}
+/* Not sure what nav a:active controls... */
 nav a,
 nav a:visited,
 nav a:active {
     color: blue;
+    text-decoration: none; /* Remove underlines */
 }
-
 nav a:hover {
-    color: #696969;
+    color: #696969; /* Darker gray */
 }
-
 nav li {
     margin-left: -25px;
     list-style: none;
 }
 
+/* FOOTER */
 footer {
 	clear: both;
 	width: 100%;
 }
 
+/* Not sure what article does */
 article {
 	margin: 10px;
 }
-
 article h2>a,
 article h2>a:visited,
 article h2>a:active {
     text-decoration: none;
     color: blue;
 }
-
 article h2>a:hover {
-    color: #696969;
+    color: #696969; /* Darker gray */
 }
-
 article .entry {
 	margin-left: 15px;
 	padding: 10px;
 }
-
 article .entry img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 }
-
 article header span {
 	margin-top: -10px;
 	margin-bottom: -3px;
 	margin-left: 5px;
 }
-
 article header h2 {
     margin-bottom: 3px;
 }
-
 section address {
     font-style: normal;
     margin-left: 15px;
 }
+
+/* Paginator */
 
 #paginator {
     padding: 10px;
@@ -148,3 +180,4 @@ section address {
 }
 
 /* TODO: make a section for the <span class="comments">. */
+/* TODO: make another section for the <div class="footnote"> ? */
