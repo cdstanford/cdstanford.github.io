@@ -18,11 +18,13 @@
         <link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/fontello.css">
         <link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/animation.css">
         <!--[if IE 7]><link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/fontello-ie7.css"><![endif]-->
-    </head>
 
-    {% if site.google_analytics and jekyll.environment == 'production' %}
-    {% include analytics.html %}
-    {% endif %}
+        <!-- Google Analytics -->
+        {% if site.google_analytics and jekyll.environment == 'production' %}
+        {% include analytics.html %}
+        {% endif %}
+
+    </head>
 
     <!-- MATHJAX! -->
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
