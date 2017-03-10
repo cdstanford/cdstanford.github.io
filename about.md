@@ -1,13 +1,13 @@
 ---
 layout: page
 title: About Me
-lastedit: 2017-03-08
+lastedit: 2017-03-09
 ---
 
-![me]({{site.baseurl}}/img/face.jpg){:height="145px" title="Me" alt="Image of Me"}
+![me]({{site.baseurl}}/img/face.jpg){:height="150px" title="Me" alt="Image of Me"}
 
-Since Fall 2016, I am a PhD student in Computer Science at the University of Pennsylvania.
-I graduated from Brown University in May 2016 (ScB Mathematics - Computer Science.)
+I am a first-year PhD student in Computer Science at the University of Pennsylvania.
+I graduated from Brown University in May 2016 (ScB Mathematics -- Computer Science.)
 Here is my [CV]({{site.baseurl}}/doc/Caleb Stanford CV.pdf).
 
 ## Research Interests
