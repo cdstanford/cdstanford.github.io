@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Day 2&#58; Facebook comments |  Caleb Stanford</title>
+        <link rel="stylesheet" href="/style.css" />
+        <meta name="description" content="Personal website and blog"/>
+        <meta name="author" content="Caleb Stanford"/>
+        <link rel="author" href="humans.txt"/>
+
+        <!-- Facebook comment plugin. Two options for moderation. -->
+        <meta property="fb:app_id" content="340544043003976" />
+        <!-- <meta property="fb:admins" content="10210277106142031"/> -->
+
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
+
+        <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
+        <link rel="stylesheet" href="/resources/fontello/css/animation.css">
+        <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+
+        <!-- Google Analytics -->
+        
+
+    </head>
+
+    <!-- MATHJAX! -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+    <body>
+        <header>
+            <h1><a href="/">Caleb Stanford</a></h1>
+            <hr />
+        </header>
+
+            <nav>
+
+            <h3>Site</h3>
+            <ul>
+                <li><i class="icon-home"></i> <a href="/">Home</a></li>
+                <li><i class="icon-user"></i> <a href="/about">About</a></li>
+                <li><i class="icon-star"></i> <a href="/projects">Projects</a></li>
+            </ul>
+            
+            <h3>Posts</h3>
+            <ul>
+                <li><i class="icon-tag"></i> <a href="/tags">By tag</a></li>
+                <li><i class="icon-list"></i> <a href="/archive">By date</a></li>
+                <!-- Uncomment if I decide I want rss. -->
+                <!-- <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li> -->
+            </ul>
+            <!-- <h3>Blog links</h3>
+            <ul>
+                <li><i class="icon-list"></i>     <a href="/archive">Archive</a></li>
+                <li><i class="icon-list"></i>     <a href="/archive">Archive</a></li>
+            </ul> -->
+
+
+            <!-- <h3>Links</h3>
+            <ul>
+                <li><i class="icon-link"></i>   <a href="#">Link 1</a></li>
+                <li><i class="icon-link"></i>   <a href="#">Link 2</a></li>
+                <li><i class="icon-link"></i>   <a href="#">Link 3</a></li>
+            </ul> -->
+        </nav>
+
+        <main>
+
+            <article>
+        <header>
+            <h2>Day 2&#58; Facebook comments</h2>
+            <span><i class="icon-clock"></i><time datetime="2016-10-17">Oct 17, 2016</time></span><br/>
+            <!-- Icon for last edited. Decided to move this to the bottom instead. -->
+            <!--  -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span></br> --> <!-- Uncomment if I ever decide I want multiple authors -->
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+            <!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/">boring</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#boring">boring</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/">blog-setup</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#blog-setup">blog-setup</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>            
+        </header>
+
+        <div class="entry"><p>I set up this blog to work with Facebook comments, using the advice <a href="https://joshuacox.github.io/jekyll/2015/11/28/facebook-comments-and-jekyll/">here</a>.
+The major option for adding comments to a github site seems to be to use <a href="https://disqus.com/">Disqus</a>, but for some reason I have reservations about that.
+I think possibly because I have never bothered to comment on anything which uses Disqus,
+and I get the feeling it’s not just me. On the other hand, their interface seems generally well-designed (for example, it makes it easy to login with social media) so idk if I have any objective complaints. Some <a href="https://www.blogmarketingacademy.com/blog-comment-systems/">informal polling results</a> suggest Disqus may be slightly more popular than Facebook, but neither is as popular as having a native, more traditional looking comment form.</p>
+
+<p>So maybe neither Facebook nor Disqus is the answer. I did find some other options: <a href="https://www.hawksworx.com/blog/adding-a-static-comments-system-to-my-jekyll-build/">1</a>, <a href="http://ivanzuzak.info/2011/02/18/github-hosted-comments-for-github-hosted-blogs.html">2</a>.</p>
+
+<p>The upshot is that while Facebook comments are set up and hopefully work (test them out below!), that could be a mistake on my part and may change soon.
+I’m not really expecting too many comments in the meantime.</p>
+
+            
+        </div>
+
+
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        
+          <hr/>
+          <h4>Comments</h4>
+
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/10/17/comment-system/" data-colorscheme="light" data-num-posts="10" data-width="706"></div>
+        
+
+        <footer><!-- additional info --></footer>
+
+</article>
+
+
+        </main>
+
+        <footer>
+            <hr />
+            <!-- <p>Caleb Stanford, <time>2017</time>.</p> -->
+        </footer>
+
+        <script src="/scripts.js"></script>
+    </body>
+
+</html>
