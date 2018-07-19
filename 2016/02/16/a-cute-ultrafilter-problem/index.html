@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> A cute ultrafilter problem (copied from WordPress) |  Caleb Stanford</title>
+        <link rel="stylesheet" href="/style.css" />
+        <meta name="description" content="Personal website and blog"/>
+        <meta name="author" content="Caleb Stanford"/>
+        <link rel="author" href="humans.txt"/>
+
+        <!-- Facebook comment plugin. Two options for moderation. -->
+        <meta property="fb:app_id" content="340544043003976" />
+        <!-- <meta property="fb:admins" content="10210277106142031"/> -->
+
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
+
+        <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
+        <link rel="stylesheet" href="/resources/fontello/css/animation.css">
+        <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+
+        <!-- Google Analytics -->
+        
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93362615-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Replaced tracking code: UA-93362615-1, and placed in _config.yml.
+ 	 See https://desiredpersona.com/google-analytics-jekyll/. -->
+
+        
+
+    </head>
+
+    <!-- MATHJAX! -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+    <body>
+        <header>
+            <h1><a href="/">Caleb Stanford</a></h1>
+            <!-- <h2>New posts always eventually.</h2> -->
+            <hr />
+        </header>
+
+            <nav>
+
+            <h3>Site</h3>
+            <ul>
+                <li><i class="icon-home"></i> <a href="/">Home</a></li>
+                <li><i class="icon-user"></i> <a href="/about">About</a></li>
+                <li><i class="icon-popup"></i> <a href="/research">Research</a></li>
+                <li><i class="icon-star"></i> <a href="/projects">Projects</a></li>
+            </ul>
+            
+            <h3>Posts</h3>
+            <ul>
+                <li><i class="icon-tag"></i> <a href="/tags">By tag</a></li>
+                <li><i class="icon-list"></i> <a href="/archive">By date</a></li>
+                <!-- Uncomment if I decide I want rss. -->
+                <!-- <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li> -->
+            </ul>
+            <!-- <h3>Blog links</h3>
+            <ul>
+                <li><i class="icon-list"></i>     <a href="/archive">Archive</a></li>
+                <li><i class="icon-list"></i>     <a href="/archive">Archive</a></li>
+            </ul> -->
+
+
+            <!-- <h3>Links</h3>
+            <ul>
+                <li><i class="icon-link"></i>   <a href="#">Link 1</a></li>
+                <li><i class="icon-link"></i>   <a href="#">Link 2</a></li>
+                <li><i class="icon-link"></i>   <a href="#">Link 3</a></li>
+            </ul> -->
+        </nav>
+
+        <main>
+
+            <article>
+        <header>
+            <h2>A cute ultrafilter problem (copied from WordPress)</h2>
+            <span><i class="icon-clock"></i><time datetime="2016-02-16">Feb 16, 2016</time></span><br/>
+            <!-- Icon for last edited. Decided to move this to the bottom instead. -->
+            <!-- 
+                <span><i class="icon-clock"></i><time datetime="2018-06-23">Jun 23, 2018</time></span><br/>
+             -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span></br> --> <!-- Uncomment if I ever decide I want multiple authors -->
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+            <!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/math">math</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+        </header>
+
+        <div class="entry"><p><em>Note: This post is copied over from an old WordPress blog, with two posts. The posts were moved here on June 23, 2018.</em></p>
+
+<blockquote>
+  <p>Let <script type="math/tex">X</script> be a set, and let <script type="math/tex">\mathcal{U}</script> be a family of subsets of <script type="math/tex">X</script>. Prove that <script type="math/tex">\mathcal{U}</script> is an ultrafilter on <script type="math/tex">X</script> if and only if for every partition of <script type="math/tex">X</script> into three sets <script type="math/tex">S_1</script>, <script type="math/tex">S_2</script>, and <script type="math/tex">S_3</script>, exactly one <script type="math/tex">S_i</script> lies in <script type="math/tex">\mathcal{U}</script>.</p>
+</blockquote>
+
+<p>The point, I guess, is that the most fundamental property of ultrafilters is their ability to select one set out of any partition to be “significant” and declare the rest unimportant. This matches the intuition of an ultrafilter being a “perfect locating scheme” (Wikipedia). Except for the very surprising fact that it really only needs to be a perfect scheme; the “locating” part is implied!</p>
+
+<p>Of course, a disadvantage of defining ultrafilters in this way is that I can’t come up with any analogous definition of a filter. Filters, being imperfect locating schemes, need to be explicitly specified to be closed under intersection and so on.</p>
+
+<p><em>Thanks to Marion Scheepers for the math problem (a variant of what I presented above).</em></p>
+
+            
+            <div><i>Edited on <time datetime="2018-06-23">Jun 23, 2018</time>.</i></div>
+            
+        </div>
+
+
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        
+          <hr/>
+          <h4>Comments</h4>
+
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/02/16/a-cute-ultrafilter-problem/" data-colorscheme="light" data-num-posts="10" data-width="706"></div>
+        
+
+        <footer><!-- additional info --></footer>
+
+</article>
+
+
+        </main>
+
+        <footer>
+            <hr />
+            <!-- <p>Caleb Stanford, <time>2017</time>.</p> -->
+        </footer>
+
+        <script src="/scripts.js"></script>
+    </body>
+
+</html>
