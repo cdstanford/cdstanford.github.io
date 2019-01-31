@@ -91,6 +91,165 @@
 	<article>
 
         <header>
+            <h2><a href="/2017/03/08/np-vs-re/">Is NP to P as RE is to R?</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2017-03-08">Mar 08, 2017</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/computability-theory">computability-theory</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#computability-theory">computability-theory</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/complexity-theory">complexity-theory</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#complexity-theory">complexity-theory</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/math">math</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+			<!-- Facebook comments count. -->
+			<!-- Being stupid. Disabling for now. -->
+			<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+			<span class="comments"><i class="icon-comment"></i>  Comments:
+		 	<a href="http://cdstanford.github.io/2017/03/08/np-vs-re/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2017/03/08/np-vs-re/>0</span></a></span> -->
+
+        </header>
+
+		<div class="entry"><p>If you are familiar with theory of computation, perhaps you have caught yourself thinking of the relationship between NP and P as analagous to the relationship between RE and R.
+That is, nondeterministic polynomial-time is to polynomial-time as Turing-recognizable is to Turing-decidable.
+I certainly have thought this, and I think it’s because I visualize NP as a “positive” extension of P, with counterpart coNP,
+just as RE is a “positive” extension of R with counterpart coRE.</p>
+
+<p>On the face of it, this rather seems like a misconception.
+NP is formed from P by introducing nondeterminism, whereas RE is formed from R by introducing
+non-halting behavior, and these are quite different concepts.
+In particular, if we add non-halting behavior to poly-time TMs, by requiring only that
+the TM runs in poly-time <em>if it halts at all</em>, we still only obtain the class of languages P.
+And on the other hand, non-deterministic TMs are equivalent to deterministic TMs (see e.g. Sipser 2nd edition, Theorem 3.16), so adding non-determinism to decider TMs we expect to remain at the class of languages R.</p>
+
+<p>Nevertheless, <a href="http://stackoverflow.com/a/38536341/2038713">this ignored stackoverflow answer</a> claims a very close analogy in terms of verifiers, where just as NP is the class of languages with polynomial-time verifiers, RE is the class of languages which have verifiers at all.
+In fact this is true, but only if we allow the runtime of the verifier to be unbounded in the length of the original input, which seems like cheating considering that the runtime of a poly-time verifier must be <em>uniformly</em> bounded by a poly-time function in the length of the original input.</p>
+
+<p>At the core of the problem is the definition of <em>runtime</em> and <em>halting / non-halting</em> for nondeterministic and verifier TMs.
+I summarize the discussion with the following table:</p>
+
+<table style="width:90%;">
+  <tr>
+    <th>Model</th>
+    <th>Polynomial bound</th> 
+    <th>Finite bound</th> 
+    <th>Halting</th> 
+    <th>No bound</th>
+  </tr>
+  <tr> <td>         TM</td> <td> P</td> <td>R</td> <td> R</td> <td>RE</td> </tr>
+  <tr> <td> Nondet. TM</td> <td>NP</td> <td>R</td> <td> R</td> <td>RE</td> </tr>
+  <tr> <td>Verifier TM</td> <td>NP</td> <td>R</td> <td>RE</td> <td>RE</td> </tr>
+</table>
+
+<!-- Older plain-text / markdown table
+|    Model    | polynomial bound | finite bound | halting | no bound |
+|:-----------:|:----------------:|:------------:|:-------:|:--------:|
+|      TM     |         P        |       R      |    R    |    RE    |
+|  Nondet. TM |        NP        |       R      |    R    |    RE    |
+| Verifier TM |        NP        |       R      |    RE   |    RE    | -->
+
+<p>Given this, I think the correspondence between P : NP and R : RE is essentially a fluke,
+only present if we use verifiers rather than NTMs and if we only require that they halt,
+not that their runtime has a finite bound.
+The rest of this post just elaborates on and explains the above table.</p>
+
+<h3 id="non-determinism-and-verifiers-in-general">Non-determinism and verifiers, in general</h3>
+
+<p>It is perhaps clearer to think of these concepts in the most general setting.
+Therefore, let us suppose that a <em>model of computation</em>
+begins with a collection of <em>machines</em>, a collection of possible <em>inputs</em>,
+and a collection of possible <em>configurations</em>.
+For any machine <script type="math/tex">M</script> and input <script type="math/tex">w</script>, there is an <em>initial configuration</em> —
+e.g. for TMs it would be the tuple of the machine <script type="math/tex">M</script>, the initial state <script type="math/tex">q_0</script>, and the initial tape containing <script type="math/tex">w</script>.
+Then we have a <em>step function</em> (or “small-step semantics”) which maps any configuration to a new configuration,
+taking one unit of time.
+Lastly there are some <em>final configurations</em>, which do not step.
+The evaluation of <script type="math/tex">M</script> on some input <script type="math/tex">w</script> (i.e., the “big-step semantics”)
+is the final configuration that is ultimately produced by a sequence of small-steps, if it exists.
+Moreover, let’s simplify this so that the output is binary, by saying that all final configurations either <em>accept</em> or <em>reject</em>.</p>
+
+<p>A <em>nondeterministic model of computation</em> is the same but the small-step semantics can map a configuration to multiple possible configurations.
+In this case, <script type="math/tex">M</script> accepts input <script type="math/tex">w</script> if it is <em>possible</em> to arrive at an accepting configuration.
+(A discussion for another day is whether there are other reasonable definitions of the language of an NTM. Since there are many possible final configurations, we clearly need some way to aggregate all the configurations into one, and so it is natural to define some outputs to override others. In the standard definition we take accepting to override rejecting. But we could also take, for instance, non-halting behavior to override accepting!)</p>
+
+<p>A <em>verifier model of computation</em> consists of an underlying model of computation, in which inputs are ordered pairs. A verifier machine <script type="math/tex">\text{ver}(M)</script> starts by mapping the input <script type="math/tex">x</script> to a new input <script type="math/tex">(x,w)</script>, where <script type="math/tex">w</script> is the witness, feeding that to <script type="math/tex">M</script>. We formally say that <script type="math/tex">\text{ver}(M)</script> accepts <script type="math/tex">x</script> if <em>there exists a witness</em> <script type="math/tex">w</script> for which <script type="math/tex">M</script> accepts <script type="math/tex">(x,w)</script>.</p>
+
+<h3 id="runtime-bounds-for-non-deterministic-and-verifier-tms">Runtime bounds for non-deterministic and verifier TMs</h3>
+
+<p>To obtain <script type="math/tex">NP</script> from <script type="math/tex">P</script>, we have to understand how to bound the runtime of a verifier (VTM) or nondeterministic TM (NTM) by a polynomial.
+In general, the runtime of a verifier or NTM must be a notion that does not depend on the particular
+branch executed, or the particular witness string.</p>
+
+<p>If <script type="math/tex">f(n)</script> is some general function of <script type="math/tex">n</script>, we can say that an NTM’s runtime is bounded by <script type="math/tex">f(n)</script> if, on any input of size <script type="math/tex">n</script>, there is no branch with length longer than <script type="math/tex">f(n)</script> (including non-halting branches).
+A VTM’s runtime is bounded by <script type="math/tex">f(n)</script> if, on any input of size <script type="math/tex">n</script> and any witness,
+the runtime is bounded by <script type="math/tex">f(n)</script>.</p>
+
+<p>Using this definition, if we require <script type="math/tex">f</script> to be a polynomial, then NTMs and VTMs both give us NP.
+And then if we allow <script type="math/tex">f</script> to return any finite value (so, the runtime has to be bounded by a fixed function of the input),
+then both NTMs and VTMs give us R.
+The constant bound on the runtime means that we can simply try all possible branches
+or all possible witnesses with a deterministic TM, and that TM will always halt.</p>
+
+<p>But the difference between NTMs and VTMs arises if we formally require the strict bound <script type="math/tex">f(n) = \infty</script>. What this is saying is that all branches of the NTM are halting, and that the VTM halts on every input, witness pair. For NTMs, we can still simulate this with a deterministic TM, because if all branches of an NTM are halting, then we can try all of them and we will eventually halt.
+But for a VTM, we cannot try all witnesses, because there are infinitely many! It does not really matter that the VTM
+halts on each individual one.
+With a VTM, requiring the TM to always halt is no barrier to us checking a Turing-recognizable but not decidable property, because we get an existential quantification over <em>all finite strings</em> (an infinite set) for free.</p>
+
+<p>So we can say that RE is the set of languages recognized by a verifier
+TM which always halts.
+But this is somewhat dubious because maybe the “right” definition of the runtime of a verifier TM is the <em>supremum</em> over all witnesses, in which case a verifier for a language in RE but not in R will have runtime <script type="math/tex">\infty</script>.
+And maybe the right definition of a halting verifier is one whose runtime is finite.
+Under this definition, the subtle difference between NTMs and VTMs, highlighted in the original table, would disappear.</p>
+
+<h3 id="references">References</h3>
+
+<p>My definition of a decider / halting NTM does agree with Sipser 2nd edition, page 152, where he requires that a decider NTM halt on all branches. Sipser page 255 only defines the runtime for decider NTMs.
+<a href="http://cs.stackexchange.com/q/6253/24088">This CS stackexchange thread</a> also gives several different definitions of a nondeterministic decider, which are all equivalent and recognize R.
+As for verifiers, on Sipser page 265 it is suggested (but only really for the polynomial case) that the runtime for verifiers should be the supremum over all witnesses.</p>
+
+<p>In descriptive complexity, <a href="https://en.wikipedia.org/wiki/Fagin's_theorem">Fagin’s theorem</a>
+shows that NP arises from P
+essentially by allowing existentially-quantified second-order variables.
+On the other hand, RE arises from R by allowing existential quantification over <script type="math/tex">\mathbb{N}</script>.</p>
+
+<p><a href="http://cs.stackexchange.com/q/33892/24088">This old CS stackexchange question</a> seems to me a great question which is asking what I asked, but its answer does not really say anything.
+<a href="http://tau-cm2013.wikidot.com/forum/t-674853/re-r-co-re-p-np-co-np">This post in hebrew</a> might be mildly relevant but I can’t read it.</p>
+</div>
+
+		<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        
+          <h4>Comments</h4>
+
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2017/03/08/np-vs-re/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
+         -->
+
+	</article>
+
+	<article>
+
+        <header>
             <h2><a href="/2017/01/18/umo-announcement/">2017 Utah Math Olympiad Announcement</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="2017-01-18">Jan 18, 2017</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
@@ -210,141 +369,6 @@ sign in front at which point you get two representations of zero.</p>
           <h4>Comments</h4>
 
           <div class="fb-comments" data-href="http://cdstanford.github.io/2017/01/17/2017/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2016/11/15/uncomputable-relations/">Uncomputable binary relations</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2016-11-15">Nov 15, 2016</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/math">math</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
-				
-				<a href="/tags/computability">computability</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#computability">computability</a> --> <!-- getting this to work would be most ideal -->
-				
-				<a href="/tags/logic">logic</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#logic">logic</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2016/11/15/uncomputable-relations/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2016/11/15/uncomputable-relations/>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p>Consider a binary relation <script type="math/tex">R</script> on a countable set <script type="math/tex">S</script>, i.e. <script type="math/tex">R \subseteq S \times S</script>.
-Equivalently, this is a directed graph where <script type="math/tex">S</script> is the set of vertices and <script type="math/tex">R</script> is the edge relation.
-We might be interested in whether <script type="math/tex">R</script> is <em>computable</em>: given vertices <script type="math/tex">x, y \in S</script>, is it decidable whether <script type="math/tex">xRy</script>?</p>
-
-<p>However, this doesn’t make sense, because we haven’t picked a representation of the elements of <script type="math/tex">S</script> – we need to first assign elements of <script type="math/tex">S</script> to natural numbers (alternatively, to binary strings). Given any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>, we can <em>then</em> ask if <script type="math/tex">\sigma(R)</script> (<script type="math/tex">\sigma</script> applied to each coordinate of each pair in the relation) is a computable relation on <script type="math/tex">\mathbb{N} \times \mathbb{N}</script>.</p>
-
-<p>We might split all binary relations / directed graphs on <script type="math/tex">S</script>, then, into three types:</p>
-
-<ol>
-  <li>
-    <p><em>Unconditionally computable:</em> for any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>,
-<script type="math/tex">\sigma(R)</script> is computable.</p>
-  </li>
-  <li>
-    <p><em>Conditionally computable:</em> there exist bijections <script type="math/tex">\sigma_1, \sigma_2: S \to \mathbb{N}</script> such that <script type="math/tex">\sigma_1(R)</script> is computable but <script type="math/tex">\sigma_2(R)</script> is not.</p>
-  </li>
-  <li>
-    <p><em>Uncomputable:</em> for any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>, <script type="math/tex">\sigma(R)</script> is uncomputable.</p>
-  </li>
-</ol>
-
-<p>Some examples should make this classification more clear:</p>
-
-<ul>
-  <li>
-    <p>Suppose <script type="math/tex">(S,R)</script> is a directed graph with a specific vertex <script type="math/tex">a \in S</script>, and</p>
-
-    <script type="math/tex; mode=display">R = \{(a,y) \mid y \in S\}.</script>
-
-    <p>This is a relation of type (1), because no matter how we represent vertices as natural numbers, <script type="math/tex">a</script> is some particular number, and we can decide if <script type="math/tex">xRy</script> by just checking if <script type="math/tex">x = a</script>.</p>
-  </li>
-  <li>
-    <p>Let <script type="math/tex">S = \mathbb{N}</script>, with</p>
-
-    <script type="math/tex; mode=display">R = \{(x,0) \mid x \text{ is even}\} \cup \{(x,1) \mid x \text{ is odd}\}.</script>
-
-    <p>If <script type="math/tex">\sigma</script> is the identity function <script type="math/tex">\mathbb{N} \to \mathbb{N}</script>, then this is certainly computable. However, we can
-instead have <script type="math/tex">\sigma</script> send all odd numbers to halting turing machines, and even numbers to
-non-halting turing machines (where turing machines are represented as natural numbers in a
-standard way). If so, then <script type="math/tex">R</script> becomes uncomputable. So this relation is of type (2).</p>
-  </li>
-  <li>
-    <p>Let <script type="math/tex">S = \mathbb{N}</script> again, with</p>
-
-    <script type="math/tex; mode=display">% <![CDATA[
-R = \{(x,y) \mid x < y\}. %]]></script>
-
-    <p>This is again computable if <script type="math/tex">\sigma</script> is the identity bijection, because <script type="math/tex">% <![CDATA[
-< %]]></script> is a computable relation on natural numbers. But once again using a general bijection we can cause it to be uncomputable. For example, we can arrange so that <script type="math/tex">(n,n+1) \in \sigma(R)</script> for every odd <script type="math/tex">n</script> representing a halting Turing machine, and <script type="math/tex">(n+1,n) \in \sigma(R)</script> for every odd <script type="math/tex">n</script> representing a non-halting Turing machine. So this is another example of type (2).</p>
-  </li>
-</ul>
-
-<p>I’m told I’m not supposed to put exercises in a blog post, but here I go:</p>
-
-<p><strong>Exercise.</strong> Construct a relation of type (3).</p>
-
-<p>(<em>Hint:</em> One approach is for <script type="math/tex">R</script> to consist of a cycle of length <script type="math/tex">BB(n)</script>, for each natural number <script type="math/tex">n</script>, where <script type="math/tex">BB</script> is the busy beaver function. Then you have to prove that this works.)</p>
-
-<h3 id="some-observations">Some observations</h3>
-
-<p>There are only countably many relations of type (1), and they are of a very particular kind.
-Here is a classification theorem:</p>
-
-<p><strong>Theorem.</strong> <script type="math/tex">R</script> has type (1) if and only if there exists a finite subset <script type="math/tex">S_0 \subseteq S</script> such that for all <script type="math/tex">x \in S</script> and for all <script type="math/tex">y, y' \in S \setminus S_0</script>,
-<script type="math/tex">xRy</script> if and only if <script type="math/tex">xRy'</script> and <script type="math/tex">yRx</script> if and only if <script type="math/tex">y'Rx</script>.
-In other words, all vertices outside of <script type="math/tex">S_0</script> are indistinguishable from each other;
-any vertex is either connected to all of <script type="math/tex">S \setminus S_0</script>, or none of <script type="math/tex">S \setminus S_0</script>.</p>
-
-<p>An equivalent way of saying the above condition is that there is a
-quantifier-free formula <script type="math/tex">\varphi(x,y)</script> over the language of equality and allowing constants from
-<script type="math/tex">S</script>, that defines <script type="math/tex">R</script>. I.e., <script type="math/tex">xRy</script> if and only if <script type="math/tex">\varphi(x,y)</script>.</p>
-
-<p>On the other hand, there are uncountably many relations of type (2) (for silly reasons), but there are only countably many <em>non-isomorphic</em> relations of type (2).
-Since <a href="http://math.stackexchange.com/questions/27398/how-many-countable-graphs-are-there">the number of non-isomorphic countable graphs is <script type="math/tex">2^{\aleph_0}</script></a>, this means “most” relations are of type (3).</p>
-
-<p>Although we can’t construct one explicitly,
-it turns out that <a href="http://mathoverflow.net/questions/12426/is-there-a-computable-model-of-zfc">any countable model of ZFC is of type (3)</a>.
-(In this case <script type="math/tex">S</script> is the underlying set of the model, and <script type="math/tex">R</script> is the “is an element of” binary relation.)
-In contrast, the standard model of Peano Arithmetic is entirely computable – successor, addition, and multiplication are all computable relations (or computable functions, it doesn’t matter) on the natural numbers – so PA has a model of type (2).
-This is one way that ZFC is measurably more complex than a theory like PA.</p>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/11/15/uncomputable-relations/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
          -->
 
 	</article>

@@ -91,6 +91,141 @@
 	<article>
 
         <header>
+            <h2><a href="/2016/11/15/uncomputable-relations/">Uncomputable binary relations</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2016-11-15">Nov 15, 2016</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/math">math</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/computability">computability</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#computability">computability</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/logic">logic</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#logic">logic</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+			<!-- Facebook comments count. -->
+			<!-- Being stupid. Disabling for now. -->
+			<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+			<span class="comments"><i class="icon-comment"></i>  Comments:
+		 	<a href="http://cdstanford.github.io/2016/11/15/uncomputable-relations/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2016/11/15/uncomputable-relations/>0</span></a></span> -->
+
+        </header>
+
+		<div class="entry"><p>Consider a binary relation <script type="math/tex">R</script> on a countable set <script type="math/tex">S</script>, i.e. <script type="math/tex">R \subseteq S \times S</script>.
+Equivalently, this is a directed graph where <script type="math/tex">S</script> is the set of vertices and <script type="math/tex">R</script> is the edge relation.
+We might be interested in whether <script type="math/tex">R</script> is <em>computable</em>: given vertices <script type="math/tex">x, y \in S</script>, is it decidable whether <script type="math/tex">xRy</script>?</p>
+
+<p>However, this doesn’t make sense, because we haven’t picked a representation of the elements of <script type="math/tex">S</script> – we need to first assign elements of <script type="math/tex">S</script> to natural numbers (alternatively, to binary strings). Given any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>, we can <em>then</em> ask if <script type="math/tex">\sigma(R)</script> (<script type="math/tex">\sigma</script> applied to each coordinate of each pair in the relation) is a computable relation on <script type="math/tex">\mathbb{N} \times \mathbb{N}</script>.</p>
+
+<p>We might split all binary relations / directed graphs on <script type="math/tex">S</script>, then, into three types:</p>
+
+<ol>
+  <li>
+    <p><em>Unconditionally computable:</em> for any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>,
+<script type="math/tex">\sigma(R)</script> is computable.</p>
+  </li>
+  <li>
+    <p><em>Conditionally computable:</em> there exist bijections <script type="math/tex">\sigma_1, \sigma_2: S \to \mathbb{N}</script> such that <script type="math/tex">\sigma_1(R)</script> is computable but <script type="math/tex">\sigma_2(R)</script> is not.</p>
+  </li>
+  <li>
+    <p><em>Uncomputable:</em> for any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>, <script type="math/tex">\sigma(R)</script> is uncomputable.</p>
+  </li>
+</ol>
+
+<p>Some examples should make this classification more clear:</p>
+
+<ul>
+  <li>
+    <p>Suppose <script type="math/tex">(S,R)</script> is a directed graph with a specific vertex <script type="math/tex">a \in S</script>, and</p>
+
+    <script type="math/tex; mode=display">R = \{(a,y) \mid y \in S\}.</script>
+
+    <p>This is a relation of type (1), because no matter how we represent vertices as natural numbers, <script type="math/tex">a</script> is some particular number, and we can decide if <script type="math/tex">xRy</script> by just checking if <script type="math/tex">x = a</script>.</p>
+  </li>
+  <li>
+    <p>Let <script type="math/tex">S = \mathbb{N}</script>, with</p>
+
+    <script type="math/tex; mode=display">R = \{(x,0) \mid x \text{ is even}\} \cup \{(x,1) \mid x \text{ is odd}\}.</script>
+
+    <p>If <script type="math/tex">\sigma</script> is the identity function <script type="math/tex">\mathbb{N} \to \mathbb{N}</script>, then this is certainly computable. However, we can
+instead have <script type="math/tex">\sigma</script> send all odd numbers to halting turing machines, and even numbers to
+non-halting turing machines (where turing machines are represented as natural numbers in a
+standard way). If so, then <script type="math/tex">R</script> becomes uncomputable. So this relation is of type (2).</p>
+  </li>
+  <li>
+    <p>Let <script type="math/tex">S = \mathbb{N}</script> again, with</p>
+
+    <script type="math/tex; mode=display">% <![CDATA[
+R = \{(x,y) \mid x < y\}. %]]></script>
+
+    <p>This is again computable if <script type="math/tex">\sigma</script> is the identity bijection, because <script type="math/tex">% <![CDATA[
+< %]]></script> is a computable relation on natural numbers. But once again using a general bijection we can cause it to be uncomputable. For example, we can arrange so that <script type="math/tex">(n,n+1) \in \sigma(R)</script> for every odd <script type="math/tex">n</script> representing a halting Turing machine, and <script type="math/tex">(n+1,n) \in \sigma(R)</script> for every odd <script type="math/tex">n</script> representing a non-halting Turing machine. So this is another example of type (2).</p>
+  </li>
+</ul>
+
+<p>I’m told I’m not supposed to put exercises in a blog post, but here I go:</p>
+
+<p><strong>Exercise.</strong> Construct a relation of type (3).</p>
+
+<p>(<em>Hint:</em> One approach is for <script type="math/tex">R</script> to consist of a cycle of length <script type="math/tex">BB(n)</script>, for each natural number <script type="math/tex">n</script>, where <script type="math/tex">BB</script> is the busy beaver function. Then you have to prove that this works.)</p>
+
+<h3 id="some-observations">Some observations</h3>
+
+<p>There are only countably many relations of type (1), and they are of a very particular kind.
+Here is a classification theorem:</p>
+
+<p><strong>Theorem.</strong> <script type="math/tex">R</script> has type (1) if and only if there exists a finite subset <script type="math/tex">S_0 \subseteq S</script> such that for all <script type="math/tex">x \in S</script> and for all <script type="math/tex">y, y' \in S \setminus S_0</script>,
+<script type="math/tex">xRy</script> if and only if <script type="math/tex">xRy'</script> and <script type="math/tex">yRx</script> if and only if <script type="math/tex">y'Rx</script>.
+In other words, all vertices outside of <script type="math/tex">S_0</script> are indistinguishable from each other;
+any vertex is either connected to all of <script type="math/tex">S \setminus S_0</script>, or none of <script type="math/tex">S \setminus S_0</script>.</p>
+
+<p>An equivalent way of saying the above condition is that there is a
+quantifier-free formula <script type="math/tex">\varphi(x,y)</script> over the language of equality and allowing constants from
+<script type="math/tex">S</script>, that defines <script type="math/tex">R</script>. I.e., <script type="math/tex">xRy</script> if and only if <script type="math/tex">\varphi(x,y)</script>.</p>
+
+<p>On the other hand, there are uncountably many relations of type (2) (for silly reasons), but there are only countably many <em>non-isomorphic</em> relations of type (2).
+Since <a href="http://math.stackexchange.com/questions/27398/how-many-countable-graphs-are-there">the number of non-isomorphic countable graphs is <script type="math/tex">2^{\aleph_0}</script></a>, this means “most” relations are of type (3).</p>
+
+<p>Although we can’t construct one explicitly,
+it turns out that <a href="http://mathoverflow.net/questions/12426/is-there-a-computable-model-of-zfc">any countable model of ZFC is of type (3)</a>.
+(In this case <script type="math/tex">S</script> is the underlying set of the model, and <script type="math/tex">R</script> is the “is an element of” binary relation.)
+In contrast, the standard model of Peano Arithmetic is entirely computable – successor, addition, and multiplication are all computable relations (or computable functions, it doesn’t matter) on the natural numbers – so PA has a model of type (2).
+This is one way that ZFC is measurably more complex than a theory like PA.</p>
+</div>
+
+		<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        
+          <h4>Comments</h4>
+
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/11/15/uncomputable-relations/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
+         -->
+
+	</article>
+
+	<article>
+
+        <header>
             <h2><a href="/2016/10/25/moving-to-canada/">"I'm moving to Canada"</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="2016-10-25">Oct 25, 2016</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
@@ -204,82 +339,6 @@ I’m not really expecting too many comments in the meantime.</p>
           <h4>Comments</h4>
 
           <div class="fb-comments" data-href="http://cdstanford.github.io/2016/10/17/comment-system/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2016/10/16/first-post/">First post</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2016-10-16">Oct 16, 2016</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/boring">boring</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#boring">boring</a> --> <!-- getting this to work would be most ideal -->
-				
-				<a href="/tags/this-blog">this-blog</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#this-blog">this-blog</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2016/10/16/first-post/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2016/10/16/first-post/>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p>Today, October 16, 2016, marks the day I finally get a simple website and blog up and running. :)
-The links in the sidebar should also be working. “About” being the most important of these.</p>
-
-<p>I set up this site using <a href="https://pages.github.com/">Github Pages</a>
-and <a href="https://jekyllrb.com/">Jekyll</a>.
-Of course, I got help from some people.
-I used <a href="https://github.com/maciakl/Sample-Jekyll-Site">this github repository</a> as a template, and haven’t modified the style and layout much (yet).</p>
-
-<p>Here’s my list of things to do next, in no particular order:</p>
-
-<ol>
-  <li>
-    <p>Set up a working comment system.</p>
-  </li>
-  <li>
-    <p>Get MathJax working with the site.</p>
-  </li>
-  <li>
-    <p>Get tags to work.</p>
-  </li>
-  <li>
-    <p>Mess with the CSS to make things a bit more pretty.</p>
-  </li>
-</ol>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/10/16/first-post/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
          -->
 
 	</article>
