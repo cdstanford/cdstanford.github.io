@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title> The first post (copied from WordPress) |  Caleb Stanford</title>
+        <title> Home |  Caleb Stanford</title>
         <link rel="stylesheet" href="/style.css" />
         <meta name="description" content="Personal website and blog"/>
         <meta name="author" content="Caleb Stanford"/>
@@ -84,24 +84,41 @@
 
         <main>
 
-            <article>
+            <!-- Show last n posts here -->
+<!-- Using paginator! -->
+<!-- n is the 'paginate' value in _config.yml -->
+
+	<article>
+
         <header>
-            <h2>The first post (copied from WordPress)</h2>
-            <span><i class="icon-clock"></i><time datetime="2015-11-13">Nov 13, 2015</time></span><br/>
-            <!-- Icon for last edited. Decided to move this to the bottom instead. -->
-            <!--  -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span></br> --> <!-- Uncomment if I ever decide I want multiple authors -->
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-            <!-- Tags -->
+            <h2><a href="/2015/11/13/the-first-post/">The first post (copied from WordPress)</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2015-11-13">Nov 13, 2015</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
 			<span class="tags"><i class="icon-tag"></i>
 				
 				<a href="/tags/this-blog">this-blog</a> <!-- no # in the link for now -->
 				<!-- <a href="tags/#this-blog">this-blog</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
+			<!-- Facebook comments count. -->
+			<!-- Being stupid. Disabling for now. -->
+			<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+			<span class="comments"><i class="icon-comment"></i>  Comments:
+		 	<a href="http://cdstanford.github.io/2015/11/13/the-first-post/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2015/11/13/the-first-post/>0</span></a></span> -->
+
         </header>
 
-        <div class="entry"><p><em>Note: This post is copied over from an old WordPress blog, with two posts. The posts were moved here on June 23, 2018.</em></p>
+		<div class="entry"><p><em>Note: This post is copied over from an old WordPress blog, with two posts. The posts were moved here on June 23, 2018.</em></p>
 
 <p>I have always wanted to have a blog. At least, since sometime in high school. Several things, however, have stopped me from actually writing one.</p>
 
@@ -126,12 +143,9 @@
 <p>Re: the second roadblock, I actually don’t expect anyone (or at least hardly anyone) to read this. The purpose is more for myself: to have a place to collect thoughts, to organize the ideas that I have had and currently have, and to explore various topics. Presently, I have folders of folders of notes on my computer with various math problems, philosophical ideas, programming projects, and so on–organized so that I can access them, but not available to anyone else. I figure I might as well have a place to talk about these in a way that involves other people (or at least hypothetical other people) and with more versatility in tagging and linking things around the web. And maybe, if I am lucky, some others will read some things I write and there will be some collaboration or discussion. Also, I think this offers more capacity to organize ideas and link back later than, say, facebook posting (which is currently my main way of sharing ideas publicly).</p>
 
 <p>So, that’s it. I’m actually writing a blog! Hooray.</p>
+</div>
 
-            
-        </div>
-
-
-        <div id="fb-root"></div>
+		<!-- <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -141,15 +155,26 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
         
-          <hr/>
           <h4>Comments</h4>
 
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2015/11/13/the-first-post/" data-colorscheme="light" data-num-posts="10" data-width="706"></div>
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2015/11/13/the-first-post/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
+         -->
+
+	</article>
+
+
+<!-- Paginator navigation links -->
+<div id="paginator">
+	
         
-
-        <footer><!-- additional info --></footer>
-
-</article>
+				<span class="prevlink">
+                <a href="/page6">
+                &laquo; Newer Posts </a>
+				</span>
+        
+    
+	
+</div>
 
 
         </main>
