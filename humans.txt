@@ -2,7 +2,7 @@
 # INFO
 
 Content is written and owned by me, Caleb Stanford.
-This file updated 2019-10-15.
+This file updated 2016-10-16.
 This site is built with a template made by Luke Maciak, which can be found at https://github.com/maciakl/Sample-Jekyll-Site.
 Below is his original humans.txt.
 
