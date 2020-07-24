@@ -105,7 +105,7 @@
 			</span>
         </header>
 
-        <div class="entry"><p>If you are familiar with theory of computation, perhaps you have caught yourself thinking of the relationship between NP and P as analagous to the relationship between RE and R.
+        <div class="entry"><p>If you are familiar with theory of computation, perhaps you have caught yourself thinking of the relationship between NP and P as analogous to the relationship between RE and R.
 That is, nondeterministic polynomial-time is to polynomial-time as Turing-recognizable is to Turing-decidable.
 I certainly have thought this, and I think it’s because I visualize NP as a “positive” extension of P, with counterpart coNP,
 just as RE is a “positive” extension of R with counterpart coRE.</p>
@@ -117,7 +117,7 @@ In particular, if we add non-halting behavior to poly-time TMs, by requiring onl
 the TM runs in poly-time <em>if it halts at all</em>, we still only obtain the class of languages P.
 And on the other hand, non-deterministic TMs are equivalent to deterministic TMs (see e.g. Sipser 2nd edition, Theorem 3.16), so adding non-determinism to decider TMs we expect to remain at the class of languages R.</p>
 
-<p>Nevertheless, <a href="http://stackoverflow.com/a/38536341/2038713">this ignored stackoverflow answer</a> claims a very close analogy in terms of verifiers, where just as NP is the class of languages with polynomial-time verifiers, RE is the class of languages which have verifiers at all.
+<p>Nevertheless, <a href="http://stackoverflow.com/a/38536341/2038713">this ignored StackOverflow answer</a> claims a very close analogy in terms of verifiers, where just as NP is the class of languages with polynomial-time verifiers, RE is the class of languages which have verifiers at all.
 In fact this is true, but only if we allow the runtime of the verifier to be unbounded in the length of the original input, which seems like cheating considering that the runtime of a poly-time verifier must be <em>uniformly</em> bounded by a poly-time function in the length of the original input.</p>
 
 <p>At the core of the problem is the definition of <em>runtime</em> and <em>halting / non-halting</em> for nondeterministic and verifier TMs.
@@ -199,7 +199,7 @@ Under this definition, the subtle difference between NTMs and VTMs, highlighted 
 <h3 id="references">References</h3>
 
 <p>My definition of a decider / halting NTM does agree with Sipser 2nd edition, page 152, where he requires that a decider NTM halt on all branches. Sipser page 255 only defines the runtime for decider NTMs.
-<a href="http://cs.stackexchange.com/q/6253/24088">This CS stackexchange thread</a> also gives several different definitions of a nondeterministic decider, which are all equivalent and recognize R.
+<a href="http://cs.stackexchange.com/q/6253/24088">This CS StackExchange thread</a> also gives several different definitions of a nondeterministic decider, which are all equivalent and recognize R.
 As for verifiers, on Sipser page 265 it is suggested (but only really for the polynomial case) that the runtime for verifiers should be the supremum over all witnesses.</p>
 
 <p>In descriptive complexity, <a href="https://en.wikipedia.org/wiki/Fagin's_theorem">Fagin’s theorem</a>
@@ -207,7 +207,7 @@ shows that NP arises from P
 essentially by allowing existentially-quantified second-order variables.
 On the other hand, RE arises from R by allowing existential quantification over <script type="math/tex">\mathbb{N}</script>.</p>
 
-<p><a href="http://cs.stackexchange.com/q/33892/24088">This old CS stackexchange question</a> seems to me a great question which is asking what I asked, but its answer does not really say anything.
+<p><a href="http://cs.stackexchange.com/q/33892/24088">This old CS StackExchange question</a> seems to me a great question which is asking what I asked, but its answer does not really say anything.
 <a href="http://tau-cm2013.wikidot.com/forum/t-674853/re-r-co-re-p-np-co-np">This post in hebrew</a> might be mildly relevant but I can’t read it.</p>
 
             

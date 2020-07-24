@@ -40,10 +40,10 @@ body>header h4 {
 }*/
 
 hr {
-    margin-left: 0;
-    padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 	width: 80%;
-	min-width: 840px;
+	min-width: 400px;
     height: 1px;
     color: #909090; /* I think this does nothing on modern browsers */
     background-color: #909090;
