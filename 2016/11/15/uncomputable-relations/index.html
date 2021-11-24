@@ -55,7 +55,7 @@
             <ul>
                 <li><i class="icon-home"></i> <a href="/">Home</a></li>
                 <li><i class="icon-popup"></i> <a href="https://cis.upenn.edu/~castan">Research</a></li>
-                <li><i class="icon-user"></i> <a href="/about">About Me</a></li>
+                <li><i class="icon-user"></i> <a href="/about">About</a></li>
                 <li><i class="icon-trash"></i> <a href="/misc">Miscellaneous</a></li>
             </ul>
 
@@ -108,24 +108,24 @@
 			</span>
         </header>
 
-        <div class="entry"><p>Consider a binary relation <script type="math/tex">R</script> on a countable set <script type="math/tex">S</script>, i.e. <script type="math/tex">R \subseteq S \times S</script>.
-Equivalently, this is a directed graph where <script type="math/tex">S</script> is the set of vertices and <script type="math/tex">R</script> is the edge relation.
-We might be interested in whether <script type="math/tex">R</script> is <em>computable</em>: given vertices <script type="math/tex">x, y \in S</script>, is it decidable whether <script type="math/tex">xRy</script>?</p>
+        <div class="entry"><p>Consider a binary relation \(R\) on a countable set \(S\), i.e. \(R \subseteq S \times S\).
+Equivalently, this is a directed graph where \(S\) is the set of vertices and \(R\) is the edge relation.
+We might be interested in whether \(R\) is <em>computable</em>: given vertices \(x, y \in S\), is it decidable whether \(xRy\)?</p>
 
-<p>However, this doesn’t make sense, because we haven’t picked a representation of the elements of <script type="math/tex">S</script> – we need to first assign elements of <script type="math/tex">S</script> to natural numbers (alternatively, to binary strings). Given any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>, we can <em>then</em> ask if <script type="math/tex">\sigma(R)</script> (<script type="math/tex">\sigma</script> applied to each coordinate of each pair in the relation) is a computable relation on <script type="math/tex">\mathbb{N} \times \mathbb{N}</script>.</p>
+<p>However, this doesn’t make sense, because we haven’t picked a representation of the elements of \(S\) – we need to first assign elements of \(S\) to natural numbers (alternatively, to binary strings). Given any bijection \(\sigma: S \to \mathbb{N}\), we can <em>then</em> ask if \(\sigma(R)\) (\(\sigma\) applied to each coordinate of each pair in the relation) is a computable relation on \(\mathbb{N} \times \mathbb{N}\).</p>
 
-<p>We might split all binary relations / directed graphs on <script type="math/tex">S</script>, then, into three types:</p>
+<p>We might split all binary relations / directed graphs on \(S\), then, into three types:</p>
 
 <ol>
   <li>
-    <p><em>Unconditionally computable:</em> for any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>,
-<script type="math/tex">\sigma(R)</script> is computable.</p>
+    <p><em>Unconditionally computable:</em> for any bijection \(\sigma: S \to \mathbb{N}\),
+\(\sigma(R)\) is computable.</p>
   </li>
   <li>
-    <p><em>Conditionally computable:</em> there exist bijections <script type="math/tex">\sigma_1, \sigma_2: S \to \mathbb{N}</script> such that <script type="math/tex">\sigma_1(R)</script> is computable but <script type="math/tex">\sigma_2(R)</script> is not.</p>
+    <p><em>Conditionally computable:</em> there exist bijections \(\sigma_1, \sigma_2: S \to \mathbb{N}\) such that \(\sigma_1(R)\) is computable but \(\sigma_2(R)\) is not.</p>
   </li>
   <li>
-    <p><em>Uncomputable:</em> for any bijection <script type="math/tex">\sigma: S \to \mathbb{N}</script>, <script type="math/tex">\sigma(R)</script> is uncomputable.</p>
+    <p><em>Uncomputable:</em> for any bijection \(\sigma: S \to \mathbb{N}\), \(\sigma(R)\) is uncomputable.</p>
   </li>
 </ol>
 
@@ -133,30 +133,28 @@ We might be interested in whether <script type="math/tex">R</script> is <em>comp
 
 <ul>
   <li>
-    <p>Suppose <script type="math/tex">(S,R)</script> is a directed graph with a specific vertex <script type="math/tex">a \in S</script>, and</p>
+    <p>Suppose \((S,R)\) is a directed graph with a specific vertex \(a \in S\), and</p>
 
-    <script type="math/tex; mode=display">R = \{(a,y) \mid y \in S\}.</script>
+\[R = \{(a,y) \mid y \in S\}.\]
 
-    <p>This is a relation of type (1), because no matter how we represent vertices as natural numbers, <script type="math/tex">a</script> is some particular number, and we can decide if <script type="math/tex">xRy</script> by just checking if <script type="math/tex">x = a</script>.</p>
+    <p>This is a relation of type (1), because no matter how we represent vertices as natural numbers, \(a\) is some particular number, and we can decide if \(xRy\) by just checking if \(x = a\).</p>
   </li>
   <li>
-    <p>Let <script type="math/tex">S = \mathbb{N}</script>, with</p>
+    <p>Let \(S = \mathbb{N}\), with</p>
 
-    <script type="math/tex; mode=display">R = \{(x,0) \mid x \text{ is even}\} \cup \{(x,1) \mid x \text{ is odd}\}.</script>
+\[R = \{(x,0) \mid x \text{ is even}\} \cup \{(x,1) \mid x \text{ is odd}\}.\]
 
-    <p>If <script type="math/tex">\sigma</script> is the identity function <script type="math/tex">\mathbb{N} \to \mathbb{N}</script>, then this is certainly computable. However, we can
-instead have <script type="math/tex">\sigma</script> send all odd numbers to halting Turing machines, and even numbers to
+    <p>If \(\sigma\) is the identity function \(\mathbb{N} \to \mathbb{N}\), then this is certainly computable. However, we can
+instead have \(\sigma\) send all odd numbers to halting Turing machines, and even numbers to
 non-halting Turing machines (where Turing machines are represented as natural numbers in a
-standard way). If so, then <script type="math/tex">R</script> becomes uncomputable. So this relation is of type (2).</p>
+standard way). If so, then \(R\) becomes uncomputable. So this relation is of type (2).</p>
   </li>
   <li>
-    <p>Let <script type="math/tex">S = \mathbb{N}</script> again, with</p>
+    <p>Let \(S = \mathbb{N}\) again, with</p>
 
-    <script type="math/tex; mode=display">% <![CDATA[
-R = \{(x,y) \mid x < y\}. %]]></script>
+\[R = \{(x,y) \mid x &lt; y\}.\]
 
-    <p>This is again computable if <script type="math/tex">\sigma</script> is the identity bijection, because <script type="math/tex">% <![CDATA[
-< %]]></script> is a computable relation on natural numbers. But once again using a general bijection we can cause it to be uncomputable. For example, we can arrange so that <script type="math/tex">(n,n+1) \in \sigma(R)</script> for every odd <script type="math/tex">n</script> representing a halting Turing machine, and <script type="math/tex">(n+1,n) \in \sigma(R)</script> for every odd <script type="math/tex">n</script> representing a non-halting Turing machine. So this is another example of type (2).</p>
+    <p>This is again computable if \(\sigma\) is the identity bijection, because \(&lt;\) is a computable relation on natural numbers. But once again using a general bijection we can cause it to be uncomputable. For example, we can arrange so that \((n,n+1) \in \sigma(R)\) for every odd \(n\) representing a halting Turing machine, and \((n+1,n) \in \sigma(R)\) for every odd \(n\) representing a non-halting Turing machine. So this is another example of type (2).</p>
   </li>
 </ul>
 
@@ -164,28 +162,28 @@ R = \{(x,y) \mid x < y\}. %]]></script>
 
 <p><strong>Exercise.</strong> Construct a relation of type (3).</p>
 
-<p>(<em>Hint:</em> One approach is for <script type="math/tex">R</script> to consist of a cycle of length <script type="math/tex">BB(n)</script>, for each natural number <script type="math/tex">n</script>, where <script type="math/tex">BB</script> is the busy beaver function. Then you have to prove that this works.)</p>
+<p>(<em>Hint:</em> One approach is for \(R\) to consist of a cycle of length \(BB(n)\), for each natural number \(n\), where \(BB\) is the busy beaver function. Then you have to prove that this works.)</p>
 
 <h3 id="some-observations">Some observations</h3>
 
 <p>There are only countably many relations of type (1), and they are of a very particular kind.
 Here is a classification theorem:</p>
 
-<p><strong>Theorem.</strong> <script type="math/tex">R</script> has type (1) if and only if there exists a finite subset <script type="math/tex">S_0 \subseteq S</script> such that for all <script type="math/tex">x \in S</script> and for all <script type="math/tex">y, y' \in S \setminus S_0</script>,
-<script type="math/tex">xRy</script> if and only if <script type="math/tex">xRy'</script> and <script type="math/tex">yRx</script> if and only if <script type="math/tex">y'Rx</script>.
-In other words, all vertices outside of <script type="math/tex">S_0</script> are indistinguishable from each other;
-any vertex is either connected to all of <script type="math/tex">S \setminus S_0</script>, or none of <script type="math/tex">S \setminus S_0</script>.</p>
+<p><strong>Theorem.</strong> \(R\) has type (1) if and only if there exists a finite subset \(S_0 \subseteq S\) such that for all \(x \in S\) and for all \(y, y' \in S \setminus S_0\),
+\(xRy\) if and only if \(xRy'\) and \(yRx\) if and only if \(y'Rx\).
+In other words, all vertices outside of \(S_0\) are indistinguishable from each other;
+any vertex is either connected to all of \(S \setminus S_0\), or none of \(S \setminus S_0\).</p>
 
 <p>An equivalent way of saying the above condition is that there is a
-quantifier-free formula <script type="math/tex">\varphi(x,y)</script> over the language of equality and allowing constants from
-<script type="math/tex">S</script>, that defines <script type="math/tex">R</script>. I.e., <script type="math/tex">xRy</script> if and only if <script type="math/tex">\varphi(x,y)</script>.</p>
+quantifier-free formula \(\varphi(x,y)\) over the language of equality and allowing constants from
+\(S\), that defines \(R\). I.e., \(xRy\) if and only if \(\varphi(x,y)\).</p>
 
 <p>On the other hand, there are uncountably many relations of type (2) (for silly reasons), but there are only countably many <em>non-isomorphic</em> relations of type (2).
-Since <a href="http://math.stackexchange.com/questions/27398/how-many-countable-graphs-are-there">the number of non-isomorphic countable graphs is <script type="math/tex">2^{\aleph_0}</script></a>, this means “most” relations are of type (3).</p>
+Since <a href="http://math.stackexchange.com/questions/27398/how-many-countable-graphs-are-there">the number of non-isomorphic countable graphs is \(2^{\aleph_0}\)</a>, this means “most” relations are of type (3).</p>
 
 <p>Although we can’t construct one explicitly,
 it turns out that <a href="http://mathoverflow.net/questions/12426/is-there-a-computable-model-of-zfc">any countable model of ZFC is of type (3)</a>.
-(In this case <script type="math/tex">S</script> is the underlying set of the model, and <script type="math/tex">R</script> is the “is an element of” binary relation.)
+(In this case \(S\) is the underlying set of the model, and \(R\) is the “is an element of” binary relation.)
 In contrast, the standard model of Peano Arithmetic is entirely computable – successor, addition, and multiplication are all computable relations (or computable functions, it doesn’t matter) on the natural numbers – so PA has a model of type (2).
 This is one way that ZFC is measurably more complex than a theory like PA.</p>
 

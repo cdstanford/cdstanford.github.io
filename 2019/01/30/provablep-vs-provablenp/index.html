@@ -55,7 +55,7 @@
             <ul>
                 <li><i class="icon-home"></i> <a href="/">Home</a></li>
                 <li><i class="icon-popup"></i> <a href="https://cis.upenn.edu/~castan">Research</a></li>
-                <li><i class="icon-user"></i> <a href="/about">About Me</a></li>
+                <li><i class="icon-user"></i> <a href="/about">About</a></li>
                 <li><i class="icon-trash"></i> <a href="/misc">Miscellaneous</a></li>
             </ul>
 
@@ -108,58 +108,57 @@
 
         <div class="entry"><h3 id="introduction-and-background">Introduction and Background</h3>
 
-<p>The <script type="math/tex">\mathsf{P}</script> versus <script type="math/tex">\mathsf{NP}</script> question asks: is it possible to determine whether a Boolean formula is satisfiable, in time polynomial in the length of the formula? Determining whether a Boolean formulas is satisfiable is called the <em>SAT problem,</em> and programs which solve the problem are called <em>SAT solvers</em>. SAT solvers are used in many modern programming tools (usually, for automatically solving some system of constraints), so the SAT problem is of great practical importance today. And it is often suggested that a solution to “<script type="math/tex">\mathsf{P}</script> versus <script type="math/tex">\mathsf{NP}</script>” would resolve whether there exists any efficient algorithm at all for SAT.</p>
+<p>The \(\mathsf{P}\) versus \(\mathsf{NP}\) question asks: is it possible to determine whether a Boolean formula is satisfiable, in time polynomial in the length of the formula? Determining whether a Boolean formulas is satisfiable is called the <em>SAT problem,</em> and programs which solve the problem are called <em>SAT solvers</em>. SAT solvers are used in many modern programming tools (usually, for automatically solving some system of constraints), so the SAT problem is of great practical importance today. And it is often suggested that a solution to “\(\mathsf{P}\) versus \(\mathsf{NP}\)” would resolve whether there exists any efficient algorithm at all for SAT.</p>
 
-<p>There are a number of reasons why this suggestion could be wrong, or at least, a number of ways to argue against it. But here’s a particular thought: what if <script type="math/tex">\mathsf{P} = \mathsf{NP}</script> (that is, SAT can be solved in polynomial time), but the polynomial-time algorithm is beyond our ability to find – and in particular, beyond our ability to prove correct? What if there <em>exists</em> some magic algorithm that happens to work, but there <em>doesn’t exist any proof</em> that it works? Or perhaps there doesn’t exist any proof that it runs in polynomial time? Such a scenario would be an unsatisfying resolution to <script type="math/tex">\mathsf{P}</script> versus <script type="math/tex">\mathsf{NP}</script>, in a way: because practically speaking, we generally only trust algorithms that we can prove correct.</p>
+<p>There are a number of reasons why this suggestion could be wrong, or at least, a number of ways to argue against it. But here’s a particular thought: what if \(\mathsf{P} = \mathsf{NP}\) (that is, SAT can be solved in polynomial time), but the polynomial-time algorithm is beyond our ability to find – and in particular, beyond our ability to prove correct? What if there <em>exists</em> some magic algorithm that happens to work, but there <em>doesn’t exist any proof</em> that it works? Or perhaps there doesn’t exist any proof that it runs in polynomial time? Such a scenario would be an unsatisfying resolution to \(\mathsf{P}\) versus \(\mathsf{NP}\), in a way: because practically speaking, we generally only trust algorithms that we can prove correct.</p>
 
-<p>The question I’m trying to motivate is: does <script type="math/tex">\mathsf{ProvableP} = \mathsf{ProvableNP}</script>? That is, what happens if we restrict our attention to algorithms which can be proven correct? Is this question answerable, or is it just as hard as <script type="math/tex">\mathsf{P}</script> versus <script type="math/tex">\mathsf{NP}</script>?</p>
+<p>The question I’m trying to motivate is: does \(\mathsf{ProvableP} = \mathsf{ProvableNP}\)? That is, what happens if we restrict our attention to algorithms which can be proven correct? Is this question answerable, or is it just as hard as \(\mathsf{P}\) versus \(\mathsf{NP}\)?</p>
 
 <h3 id="summary">Summary</h3>
 
-<p>It turns out that <script type="math/tex">\mathsf{P} = \mathsf{NP}</script> if and only if <script type="math/tex">\mathsf{ProvableP} = \mathsf{ProvableNP}</script>.
-I’ll define what I mean by <script type="math/tex">\mathsf{ProvableP}</script> and <script type="math/tex">\mathsf{ProvableNP}</script>.
+<p>It turns out that \(\mathsf{P} = \mathsf{NP}\) if and only if \(\mathsf{ProvableP} = \mathsf{ProvableNP}\).
+I’ll define what I mean by \(\mathsf{ProvableP}\) and \(\mathsf{ProvableNP}\).
 This post is adapted from a <a href="https://cs.stackexchange.com/q/93885/24088">question</a> and <a href="https://cs.stackexchange.com/a/95470/24088">answer</a> I made on Computer Science StackExchange.</p>
 
 <h3 id="the-provablep-versus-provablenp-question">The ProvableP versus ProvableNP question</h3>
 
-<p>Fix a logic <script type="math/tex">\mathcal{L}</script> that is strong enough to encode statements about Turing machines. By this I mean the same requirements as Godel’s second incompleteness theorem; but for the purposes of this question, just assume the following:</p>
+<p>Fix a logic \(\mathcal{L}\) that is strong enough to encode statements about Turing machines. By this I mean the same requirements as Godel’s second incompleteness theorem; but for the purposes of this question, just assume the following:</p>
 
 <ul>
   <li>
-    <p><script type="math/tex">\mathcal{L}</script> is consistent (it doesn’t prove False); and</p>
+    <p>\(\mathcal{L}\) is consistent (it doesn’t prove False); and</p>
   </li>
   <li>
-    <p><script type="math/tex">\mathcal{L}</script> implies the Peano arithmetic axioms of <script type="math/tex">\mathbb{N}</script> (PA).</p>
+    <p>\(\mathcal{L}\) implies the Peano arithmetic axioms of \(\mathbb{N}\) (PA).</p>
   </li>
 </ul>
 
 <p>Then define</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
-\mathsf{ProvableP} &:= \{A \mid \mathcal{L} \text{ proves } [A \in P]\} \\
-\mathsf{ProvableNP} &:= \{A \mid \mathcal{L} \text{ proves } [A \in NP] \}
-\end{align*} %]]></script>
+\[\begin{align*}
+\mathsf{ProvableP} &amp;:= \{A \mid \mathcal{L} \text{ proves } [A \in P]\} \\
+\mathsf{ProvableNP} &amp;:= \{A \mid \mathcal{L} \text{ proves } [A \in NP] \}
+\end{align*}\]
 
-<p>There’s an issue with this definition: how do we encode languages <script type="math/tex">A</script> (of which there are uncountably many) as finite objects in order for the logic <script type="math/tex">\mathcal{L}</script> to have something to say about them? In particular, how do we encode formulas for <script type="math/tex">[A \in \mathsf{P}]</script> and <script type="math/tex">[A \in \mathsf{NP}]</script>? Let us assume that languages are subsets of the natural numbers <script type="math/tex">\mathbb{N}</script>, and that any <script type="math/tex">A</script> in <script type="math/tex">\mathsf{ProvableP}</script> or <script type="math/tex">\mathsf{ProvableNP}</script> must be given by an arbitrary formula of the symbols of <script type="math/tex">\mathcal{L}</script>, i.e. it is any <em>definable</em> subset of <script type="math/tex">\mathbb{N}</script>.</p>
+<p>There’s an issue with this definition: how do we encode languages \(A\) (of which there are uncountably many) as finite objects in order for the logic \(\mathcal{L}\) to have something to say about them? In particular, how do we encode formulas for \([A \in \mathsf{P}]\) and \([A \in \mathsf{NP}]\)? Let us assume that languages are subsets of the natural numbers \(\mathbb{N}\), and that any \(A\) in \(\mathsf{ProvableP}\) or \(\mathsf{ProvableNP}\) must be given by an arbitrary formula of the symbols of \(\mathcal{L}\), i.e. it is any <em>definable</em> subset of \(\mathbb{N}\).</p>
 
-<p>From the definition we have that <script type="math/tex">\mathsf{ProvableP} \subseteq \mathsf{ProvableNP} \subseteq \mathsf{NP}</script>. But does <script type="math/tex">\mathsf{ProvableP} = \mathsf{ProvableNP}</script>? How does this relate to the original <script type="math/tex">\mathsf{P}</script> vs <script type="math/tex">\mathsf{NP}</script> question?</p>
+<p>From the definition we have that \(\mathsf{ProvableP} \subseteq \mathsf{ProvableNP} \subseteq \mathsf{NP}\). But does \(\mathsf{ProvableP} = \mathsf{ProvableNP}\)? How does this relate to the original \(\mathsf{P}\) vs \(\mathsf{NP}\) question?</p>
 
 <h3 id="the-answer">The Answer</h3>
 
 <p>Obligatory warning: to my knowledge, this proof has not been rigorously checked by someone else :)
 But we now argue that</p>
 
-<script type="math/tex; mode=display">\boxed{\mathsf{ProvableP} = \mathsf{ProvableNP}
-\;\;\text{ if and only if }\;\;\mathsf{P} = \mathsf{NP}.}</script>
+\[\boxed{\mathsf{ProvableP} = \mathsf{ProvableNP}
+\;\;\text{ if and only if }\;\;\mathsf{P} = \mathsf{NP}.}\]
 
-<p>For the forward direction, assume <script type="math/tex">\mathsf{ProvableP} = \mathsf{ProvableNP}</script>, and consider any language <script type="math/tex">A</script> in <script type="math/tex">\mathsf{NP}</script>. Note that <script type="math/tex">A</script> is accepted by a nondeterministic Turing machine <script type="math/tex">N</script>, such that there exists a polynomial <script type="math/tex">p(n)</script> which bounds the longest execution branch of <script type="math/tex">N</script> on input a string of length <script type="math/tex">n</script>. Then let <script type="math/tex">N'</script> be a nondeterministic Turing machine with the following description: first, count the input length <script type="math/tex">n</script>; second, calculate <script type="math/tex">p(n)</script>; and finally, runs <script type="math/tex">N</script> for at most <script type="math/tex">p(n)</script> steps nondeterministically. If <script type="math/tex">N</script> doesn’t halt (this never actually occurs, but <script type="math/tex">N'</script> doesn’t know that for sure), <script type="math/tex">N'</script> rejects.</p>
+<p>For the forward direction, assume \(\mathsf{ProvableP} = \mathsf{ProvableNP}\), and consider any language \(A\) in \(\mathsf{NP}\). Note that \(A\) is accepted by a nondeterministic Turing machine \(N\), such that there exists a polynomial \(p(n)\) which bounds the longest execution branch of \(N\) on input a string of length \(n\). Then let \(N'\) be a nondeterministic Turing machine with the following description: first, count the input length \(n\); second, calculate \(p(n)\); and finally, runs \(N\) for at most \(p(n)\) steps nondeterministically. If \(N\) doesn’t halt (this never actually occurs, but \(N'\) doesn’t know that for sure), \(N'\) rejects.</p>
 
-<p>Now observe that <script type="math/tex">\mathcal{L}</script> (more specifically, PA) proves that <script type="math/tex">N'</script> runs in time <script type="math/tex">p(n)</script>. Moreover, <script type="math/tex">\mathcal{L}</script> can describe “the language of strings accepted by <script type="math/tex">N'</script>” by a formula (roughly, “there exists an sequence of configurations such that the sequence is a run of <script type="math/tex">N'</script> and ends in an accept state”). Then we have that <script type="math/tex">\mathcal{L}</script> proves <script type="math/tex">[L(N') \in \mathsf{NP}]</script>. Therefore, <script type="math/tex">L(N') \in \mathsf{ProvableNP}</script>. But we know (even if <script type="math/tex">\mathcal{L}</script> doesn’t) that <script type="math/tex">L(N') = L(N) = A</script> by construction. So <script type="math/tex">A \in \mathsf{ProvableNP}</script>. But <script type="math/tex">\mathsf{ProvableNP} = \mathsf{ProvableP} \subseteq \mathsf{P}</script>, so <script type="math/tex">A \in \mathsf{P}</script>.</p>
+<p>Now observe that \(\mathcal{L}\) (more specifically, PA) proves that \(N'\) runs in time \(p(n)\). Moreover, \(\mathcal{L}\) can describe “the language of strings accepted by \(N'\)” by a formula (roughly, “there exists an sequence of configurations such that the sequence is a run of \(N'\) and ends in an accept state”). Then we have that \(\mathcal{L}\) proves \([L(N') \in \mathsf{NP}]\). Therefore, \(L(N') \in \mathsf{ProvableNP}\). But we know (even if \(\mathcal{L}\) doesn’t) that \(L(N') = L(N) = A\) by construction. So \(A \in \mathsf{ProvableNP}\). But \(\mathsf{ProvableNP} = \mathsf{ProvableP} \subseteq \mathsf{P}\), so \(A \in \mathsf{P}\).</p>
 
-<p>The backward direction is a similar trick. Assume <script type="math/tex">\mathsf{P} = \mathsf{NP}</script> and that <script type="math/tex">A \in \mathsf{ProvableNP}</script>. Then <script type="math/tex">\mathsf{ProvableNP} \subseteq \mathsf{NP} = \mathsf{P}</script>, so <script type="math/tex">A \in \mathsf{P}</script>. From here, we know there is some Turing machine <script type="math/tex">M</script> and polynomial <script type="math/tex">p(n)</script> such that <script type="math/tex">M</script> runs in time <script type="math/tex">p(n)</script> and <script type="math/tex">L(M) = A</script>. Let <script type="math/tex">M'</script> be a deterministic Turing machine which, on input of length <script type="math/tex">n</script>, first calculates <script type="math/tex">p(n)</script>, and then runs <script type="math/tex">M</script> for at most <script type="math/tex">p(n)</script> steps. If <script type="math/tex">M</script> doesn’t halt, <script type="math/tex">M'</script> returns a default value, say <script type="math/tex">0</script>.</p>
+<p>The backward direction is a similar trick. Assume \(\mathsf{P} = \mathsf{NP}\) and that \(A \in \mathsf{ProvableNP}\). Then \(\mathsf{ProvableNP} \subseteq \mathsf{NP} = \mathsf{P}\), so \(A \in \mathsf{P}\). From here, we know there is some Turing machine \(M\) and polynomial \(p(n)\) such that \(M\) runs in time \(p(n)\) and \(L(M) = A\). Let \(M'\) be a deterministic Turing machine which, on input of length \(n\), first calculates \(p(n)\), and then runs \(M\) for at most \(p(n)\) steps. If \(M\) doesn’t halt, \(M'\) returns a default value, say \(0\).</p>
 
-<p>Then similarly to before, <script type="math/tex">\mathcal{L}</script> proves that <script type="math/tex">M'</script> halts in time <script type="math/tex">p(n)</script> and therefore that <script type="math/tex">[L(M') \in \mathsf{P}]</script>. it follows that <script type="math/tex">L(M') \in \mathsf{ProvableP}</script>, but we know (even if <script type="math/tex">\mathcal{L}</script> doesn’t) that <script type="math/tex">L(M') = L(M) = A</script>. Thus, <script type="math/tex">\mathsf{ProvableNP} = \mathsf{ProvableP}</script>. <script type="math/tex">\quad \square</script></p>
+<p>Then similarly to before, \(\mathcal{L}\) proves that \(M'\) halts in time \(p(n)\) and therefore that \([L(M') \in \mathsf{P}]\). it follows that \(L(M') \in \mathsf{ProvableP}\), but we know (even if \(\mathcal{L}\) doesn’t) that \(L(M') = L(M) = A\). Thus, \(\mathsf{ProvableNP} = \mathsf{ProvableP}\). \(\quad \square\)</p>
 
 
             
