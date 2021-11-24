@@ -90,6 +90,257 @@
 	<article>
 
         <header>
+            <h2><a href="/2020/07/24/micromort-exposure.html">Micromort Exposure</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2020-07-24">Jul 24, 2020</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/data">data</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#data">data</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/health">health</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#health">health</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+			<!-- Facebook comments count. -->
+			<!-- Being stupid. Disabling for now. -->
+			<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+			<span class="comments"><i class="icon-comment"></i>  Comments:
+		 	<a href="http://cdstanford.github.io/2020/07/24/micromort-exposure.html"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2020/07/24/micromort-exposure.html>0</span></a></span> -->
+
+        </header>
+
+		<div class="entry"><p>A <a href="https://en.wikipedia.org/wiki/Micromort"><em>micromort</em></a>, or \(\mu M\), is a unit of risk defined as a 1 in a million chance of death.</p>
+
+<p>I don’t think I’m a morbid person, but I find the unit fascinating. In general, it’s probably fair to say that human fears are way out of proportion with actual risks. For example, a common source of fear is traveling on an airplane. Yet if you calculate the expected micromort exposure, you find that <a href="https://www.vox.com/2015/5/14/8606195/train-safety-driving-crashes">air travel is at just about a hundred times safer per mile</a> compared to traveling by car. Concretely, a flight from JFK to LAX works out to \(0.2 \mu M\), which is the equivalent of 27 miles by car; by comparison, the average American drives <a href="https://www.repairsmith.com/i/blog/whats-average-miles-driven-per-year-car-lease-guide/">37 miles every day</a>.
+So you’d have to fly to LA and back every day to surpass the risk that average Americans take every day driving, in terms of micromorts.</p>
+
+<p>The example suggests that micromorts could be a promising way to quantify everyday risks, and to calibrate our collective fears accordingly. (I’m not sure the unit packs a very intuitive punch – it’s like <a href="https://www.theguardian.com/australia-news/2019/aug/20/review-calls-for-sugar-labels-to-show-images-of-teaspoons-of-sugar">reporting sugar in grams, rather than teaspoons to obscure the exact amount</a>. However, we are generally exposed to such small levels of “risk of death” on a daily basis that it’s hard to come up with a more intuitive proposal. Quantifying it at all seems like a step in a positive direction.)</p>
+
+<p>This is also relevant to Covid-19. With <a href="https://www.bbc.com/news/world-53212430">global confirmed deaths surpassing 500,000</a> in late June, and with <a href="https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm">excess deaths</a> causing <a href="https://www.nytimes.com/interactive/2020/06/10/world/coronavirus-history.html?fbclid=IwAR2BjNG7ekbTYU2T6YZgVRgvwSh2Crok1C9jTt3mEnuO-dl5hWlKov6wLUU">5 to 7 times normal mortality</a> at peak times in the worst affected areas, we are on average experiencing much higher micromort exposures than usual. I’m the kind of person who is very risk averse (I’ve been accused of being overly cautious and of turning into an agoraphobic, lol). But I think it’s a good time to consider the question: <em>exactly how much risk</em> do I routinely experience from Coronavirus and from all other factors?</p>
+
+<h2 id="disclaimers">Disclaimers</h2>
+
+<ol>
+  <li>
+    <p><strong>I am not a medical expert.</strong></p>
+  </li>
+  <li>
+    <p>I don’t think Micromorts should be used as advice for how seriously to take Covid-19.
+The problem is that these calculations do not include the micromorts passed on to others due to the spread of the virus. This micromort spread is what really gives us all an obligation to be careful (wear a mask, don’t gather in large crowds, and avoid contact especially indoors) and is not accounted for in the following numbers. <strong>Assuming exponential spread, the number of micromorts you are responsible for will also grow exponentially, far greater than just the risk to your own life.</strong> This should be a sobering thought, particularly because you could be infectious at any time, and just not know it.</p>
+  </li>
+  <li>
+    <p>The word <em>micromort</em> suggests a fixed quantity of risk, but in most of these calculations it is actually only an estimate based on <em>average</em> risk experienced by people in similar situations. For example, the plane travel vs. car travel example uses average deaths per person-mile as a proxy for risk, which is arguably not a perfect model, as perhaps risk of crash on an airplane is not linearly correlated with miles traveled (e.g., it could be linearly correlated with number of flights taken instead).</p>
+  </li>
+  <li>
+    <p>Finally, to put micromort exposures in context, the time frame matters. For my personal analysis, I will be using a time frame of one year so that all of the different amounts can be compared meaningfully.</p>
+  </li>
+</ol>
+
+<h2 id="analysis-from-the-new-york-times">Analysis from the New York Times</h2>
+
+<p>With those disclaimers out of the way, I like <a href="https://www.nytimes.com/2020/05/22/well/live/putting-the-risk-of-covid-19-in-perspective.html">this overall analysis from the New York Times</a>. An individual in NYC had experienced (at that time) roughly an additional \(50 \mu M\) per day because of Covid-19. Living in Michigan, it was instead \(11 \mu M\) per day. By comparison, if you <em>contract</em> coronavirus, it’s up to \(10000 \mu M\) (across all ages).
+This corresponds to an infection fatality rate of 1%; the true number is probably somewhere between 0.5 and 0.9, higher in places with a large number of cases (see <a href="https://en.wikipedia.org/wiki/Mortality_due_to_COVID-19">1</a>, <a href="https://www.medrxiv.org/content/10.1101/2020.05.13.20101253v3">2</a>, <a href="https://www.nature.com/articles/d41586-020-01738-2">3</a>, <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html">4</a>, <a href="https://www.acsh.org/news/2020/06/23/coronavirus-covid-deaths-us-age-race-14863">5</a>).
+Note that the rate is at least an order of magnitude more for older people, and at least an order of magnitude less for younger people;
+it has been estimated at about \(100\) to \(300 \mu M\) for ages 20-29 or \(60000 \mu M\) for ages 65+
+(<a href="https://www.acsh.org/news/2020/06/23/coronavirus-covid-deaths-us-age-race-14863">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7158570/">2</a>).</p>
+
+<h2 id="my-personal-analysis">My Personal Analysis</h2>
+
+<p>Here’s what I’ve calculated for my own personal breakdown of micromort exposure, from various sources. I didn’t try to make sure all the numbers are perfectly accurate (it seems to be quite hard for most factors), but only roughly reasonable, hopefully in  the right order of magnitude.</p>
+
+<h3 id="minor-sources-travel-and-outdoor-activities">Minor Sources: travel and outdoor activities</h3>
+
+<ul>
+  <li>
+    <p><strong>Car travel:</strong> \(1.2 \mu M\) per year (200 miles). I travel by car very infrequently.</p>
+  </li>
+  <li>
+    <p><strong>Plane travel:</strong> \(2.1 \mu M\) per year (30000 miles). It will be somewhat less this year.</p>
+  </li>
+  <li>
+    <p><strong>Walking around the city:</strong> \(5 \mu M\) per year (250 miles).</p>
+  </li>
+  <li>
+    <p><strong>Skiing:</strong> \(2 \mu M\) per year (2 days spent skiing).</p>
+  </li>
+</ul>
+
+<p>Sources for the numbers were <a href="https://www.vox.com/2015/5/14/8606195/train-safety-driving-crashes">Vox</a> and <a href="https://www.titlemax.com/media/how-likely-you-are-to-die-from-different-activities-behaviors-4.png">TitleMax</a>.</p>
+
+<h3 id="major-non-covid-sources">Major Non-Covid Sources</h3>
+
+<p>Next I wanted to know the major factors that contribute to my chances of death in general (pre-Covid). First, we need a good baseline. According to <a href="https://www.ssa.gov/oact/STATS/table4c6.html">ssa.gov</a> and echoed by <a href="https://www.statista.com/statistics/241572/death-rate-by-age-and-sex-in-the-us/">Statista</a> for recent years, Americans age 25-29 die at about the rate of \(1600 \mu M\) per year for men, and \(600 \mu M\) for women. The increase for men is largely due to greater number of accidental and injury-related deaths.
+Overall, that means an average American of my age experiences about \(\boldsymbol{1100 \mu M}\) <strong>per year</strong>.
+(Note that this baseline is not a good estimate of my personal risk, but it serves as a natural reference point.)</p>
+
+<p>Whatever accounts for the bulk of these micromorts, then, we expect will completely dwarf the “minor sources” I listed above. So what are the sources? <a href="https://www.advisory.com/daily-briefing/2019/01/16/deaths#:~:text=From%20ages%201%20to%2044,those%20aged%2065%20and%20over">This chart</a> gives us a rough idea of the major causes for ages 25-44: unintentional injuries (33%), cardiovascular diseases (CVD) (12%, including both heart disease and stroke), cancer (11%), and homicide (6%), roughly in that order, followed by a bunch of other diseases like diabetes, HIV, and influenza.
+<a href="https://www.statista.com/statistics/1113400/us-leading-causes-of-death-25-29-year-old-millennials/">Statista</a> 
+gives a more specific ranking for the age range of 25-29: accidents (45%), suicides (14%), homicide (11%), cancer (4.6%), and CVD (4.5%).
+For this post, I’m ignoring everything except these top 5. The most important question that comes to mind is, what lies in the mysterious “accidents” category?</p>
+
+<p>The answer is primarily: (1) car accidents, and (2) drug overdoses, particularly from the <a href="https://www.nytimes.com/interactive/2018/11/29/upshot/fentanyl-drug-overdose-deaths.html">Opioid</a> <a href="https://en.wikipedia.org/wiki/Opioid_epidemic_in_the_United_States">crisis</a> in the United states since the 1990s (which has <a href="https://www.nytimes.com/interactive/2020/07/15/upshot/drug-overdose-deaths.html">worsened during the pandemic</a>).
+For example <a href="https://injuryfacts.nsc.org/all-injuries/deaths-by-demographics/deaths-by-age/data-details/">Injury facts</a> lists poisoning as accounting for \(287 \mu M\) and motor vehicle accidents for \(117 \mu M\) at age 25, with all other preventable injury-related deaths at a lower order of magnitude.</p>
+
+<p>Fortunately for me, neither of these factors are significant in my own life; we have already seen that traveling by car is only a minor contributor for me, even less than walking. We can additionally exclude suicide. I will also set aside homicide, because I am in a low-risk, privileged demographic (I haven’t looked into this in detail, but for example, homicides are concentrated in <a href="https://www.theguardian.com/us-news/ng-interactive/2017/jan/09/special-report-fixing-gun-violence-in-america">high-poverty areas</a>).</p>
+
+<p>That leaves cardiovascular disease and cancer: those ominous diseases that basically account for the bulk of unpreventable deaths (or at least, only-partially-preventable deaths) that occur in people of all ages (though much more frequently with age).
+I found this difficult to get a good personalized number on.
+The issue is that while many calculators exist for risk of stroke, heart attack, and cancer (e.g. <a href="http://www.cvriskcalculator.com/">1</a>, <a href="https://www.mayoclinichealthsystem.org/locations/cannon-falls/services-and-treatments/cardiology/heart-disease-risk-calculator">2</a>, <a href="https://www.mcw.edu/calculators/coronary-heart-disease-risk">3</a>), for example based on blood pressure, height and weight, exercise, diet, etc., they are often optimized for older people, and seem to perform poorly (vastly overestimating risk) for younger people. In the end, I just did a generic calculation based on number of overall deaths for people of age 25-35, using two journal articles (<a href="https://www.ahajournals.org/doi/epub/10.1161/CIRCULATIONAHA.106.179918">1</a>, <a href="https://n.neurology.org/content/92/21/e2444/tab-figures-data">2</a>). We get \(98 \mu M\) for both CVD and cancer, but it’s probably fair (if completely arbitrary) to cut CVD in half due to that I am generally healthy (not overweight or high blood pressure). So my rough estimate is:</p>
+
+<ul>
+  <li>
+    <p><strong>Cardiovascular Diseases:</strong> \(\sim 50 \mu M\) per year</p>
+  </li>
+  <li>
+    <p><strong>Cancer:</strong> \(100 \mu M\) per year</p>
+  </li>
+</ul>
+
+<p>A related factor and <em>indirect</em> cause of death not included in the discussion so far is air pollution. The <a href="https://www.titlemax.com/media/how-likely-you-are-to-die-from-different-activities-behaviors-4.png">TitleMax</a> source identifies air pollution as a major risk factor, saying that it accounts for \(0.5 \mu M\) per <em>day</em> if you live in NYC or Boston, i.e \(180 \mu M\) per year.
+But the resulting deaths are due to the same factors as above: “increased mortality from stroke, heart disease, chronic obstructive pulmonary disease, lung cancer and acute respiratory infections” <a href="https://www.who.int/health-topics/air-pollution#tab=tab_1">according to WHO</a>. Thus, adding in \(180 \mu M\) a year for living in Philadelphia would probably not be correct; the above numbers were based on averages for all Americans, which already takes a good deal of air pollution into account. To avoid overcounting, I will thus not include a specific number on this.</p>
+
+<p>It’s worth mentioning two other major person-specific sources that fall into the normal (non-Covid) category. The first is traveling by motorbike, if you do that regularly, which is far more dangerous than traveling by car. The second is giving birth, which is about \(200 \mu M\) in the United States, according to the <a href="https://www.nytimes.com/2020/05/22/well/live/putting-the-risk-of-covid-19-in-perspective.html">NYT</a> source (and <a href="https://www.titlemax.com/media/how-likely-you-are-to-die-from-different-activities-behaviors-4.png">TitleMax’s estimate</a> is similar).</p>
+
+<h3 id="covid-19-sources">Covid-19 Sources</h3>
+
+<p>We have already established that contracting the virus for a person of my age range is about \(100\) to \(300 \mu M\), i.e., comparable or higher than my exposure to most of the major non-Covid sources over the next year. The question is, though, what is my personal risk of getting it in the next year? And what is my personal risk of death accounting for comorbidities? These are more difficult to be precise about. I tried different things:</p>
+
+<ul>
+  <li>
+    <p>According to <a href="https://www.covid19survivalcalculator.com/">this calculator</a> based on various basic information, environmental, behavioral, and health factors, my risk of infection is about 5% and my risk of death if infected is .05% (\(500 \mu M\)), which puts my micromort exposure at \(25 \mu M\). According to the <a href="https://www.covid19survivalcalculator.com/en/research">details</a> of their methodology, the risk of infection appears to be estimated over a long enough time frame for the pandemic to completely play out (say, at least 12-18 months), and also assumes no vaccine. As a result, the 5% number is likely an overestimate. Some issues are that the app isn’t designed by medical professionals, and it doesn’t take into account my location.</p>
+  </li>
+  <li>
+    <p>A <a href="https://19andme.covid19.mathematica.org/">second calculator</a> based on health and behavioral factors puts my personal risk of catching the virus through community transmission at 0.009% per week. Using 850 cases in Philadelphia in the last week, assuming an underreporting factor of 5, there are approximately 4300 new cases this week, which is a .2% chance of infection for the average person (assuming everyone is equally likely, which ignores people who are already immune). So apparently my behaviors make me much safer than I would be otherwise. If we take a .01% risk which accumulates over the next \(50\) weeks, we get a .5% risk (note that the approximation of multiplying by 50 instead of using \(1 - (1-p)^{50}\) is accurate for a probability this small).</p>
+  </li>
+</ul>
+
+<p>Overall, by different calculations I have somewhere between a .5% and 5% risk of contracting the virus in the next year assuming my current risk-averse behaviors; and I experience somewhere between \(100\) and \(500 \mu M\) if I get the virus. Going with 3% and \(400 \mu  M\) to approximate these numbers erring towards the high end, we have:</p>
+
+<ul>
+  <li><strong>Covid-19 in the next year</strong> (in Philadelphia, by different calculations, assuming risk-averse behavioral factors, age 25, and lack of comorbidities): \(\sim 12 \mu M\).</li>
+</ul>
+
+<p>The full range is \(.5\) to \(25 \mu M\).
+However, this is assuming I continue to be very careful; if I stop being careful and encounter more people on a daily basis (right now I just encounter one person), it will increase substantially.</p>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>I have two main conclusions from this exercise. First, as a very risk-averse person, <strong>Covid-19 is the highest source of micromorts for me other than CVD and cancer.</strong></p>
+
+<p>The raw number of micromorts that I calculated in the end was not as high as I expected, and not as high as some of my estimates in earlier drafts.
+However, if my behaviors change to be less careful about contracting the virus, my personal risk will likely increase substantially, and would be on par with the highest factors or greater.
+As a thought experiment, suppose that more risky behaviors would result in an order of magnitude increase. Then that would be \(120 \mu M\), or \(120 - 12 = 108 \mu M\) from Covid-19 that are <em>preventable.</em> This would probably be much higher than what I can prevent otherwise, say, by getting better exercise.</p>
+
+<p>Thus, my second conclusion is more speculative: <strong>Covid-19 is likely the largest source of <em>preventable</em> micromorts for me in the next year.</strong> It would be nice to do a detailed analysis of this in a future post.</p>
+
+<hr />
+
+<p><em>Thanks to Kei Nishimura-Gasparian, Ariana Spentzos, and Joseph Stanford for providing feedback on earlier drafts of this post.</em></p>
+</div>
+
+		<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        
+          <h4>Comments</h4>
+
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2020/07/24/micromort-exposure.html" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
+         -->
+
+	</article>
+
+	<article>
+
+        <header>
+            <h2><a href="/2020/07/19/puzzle-safari.html">Microsoft Puzzle Safari 2020</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2020-07-19">Jul 19, 2020</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/games">games</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#games">games</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/puzzles">puzzles</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#puzzles">puzzles</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+			<!-- Facebook comments count. -->
+			<!-- Being stupid. Disabling for now. -->
+			<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+			<span class="comments"><i class="icon-comment"></i>  Comments:
+		 	<a href="http://cdstanford.github.io/2020/07/19/puzzle-safari.html"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2020/07/19/puzzle-safari.html>0</span></a></span> -->
+
+        </header>
+
+		<div class="entry"><p>One of the fun things about doing an internship at Microsoft has been all the puzzle-hunt related activities they run.
+Yesterday, with a team of four, I participated in the <a href="https://safarilabs.solutions/">Puzzle</a> <a href="https://en.wikipedia.org/wiki/Microsoft_Puzzle_Safari"> Safari</a>. Although a fully virtual event, it was one of the more fun puzzle hunts I’ve done. The safari is not just about solving puzzles; it mixes in different activities every time you solve a puzzle. Usually, you have to take some kind of photo in your home or outside it, but you can also go on a run, or a few activities were games inside a Minecraft world. The photos worked out really well, first because of the creative challenge of many of them, and second because it offers a break from just sitting in front of a screen the whole time and forces you to get up and move around.</p>
+
+<p>Great job to the organizers!</p>
+
+<h2 id="some-favorite-puzzles">Some favorite puzzles</h2>
+
+<ul>
+  <li><a href="https://safarilabs.solutions/File/Chemical%20Compounds.pdf?uri=https%3A%2F%2Fpuzzlesafari.blob.core.windows.net%2Fsafari2020%2Fgmahvssspi.pdf">Chemical Compounds</a>. There is something about puzzles that make you rearrange a grid of squares that always gets me.</li>
+  <li><a href="https://safarilabs.solutions/File/Complex%20Molecules.pdf?uri=https%3A%2F%2Fpuzzlesafari.blob.core.windows.net%2Fsafari2020%2Fpfcdgkxxsc.pdf">Complex Molecules</a>. Elegant!</li>
+  <li><a href="https://safarilabs.solutions/File/Quirky%20Quarks.pdf?uri=https%3A%2F%2Fpuzzlesafari.blob.core.windows.net%2Fsafari2020%2Fbtmsbomrza.pdf">Quirky Quarks</a>. Perhaps not that challenging, but cute and enjoyable.</li>
+</ul>
+
+<p>Finally, my favorite “Experiment” (moderated activity which you participate in for points) was <a href="https://safarilabs.solutions/File/%5BEXPERIMENT%5D%20Stone%20Age%20Science.pdf?uri=https%3A%2F%2Fpuzzlesafari.blob.core.windows.net%2Fsafari2020%2Fqninyiisob.pdf">Stone Age Science</a>. This is a word game where you have to clue a keyword or phrase using only one-syllable words.</p>
+
+<h2 id="favorite-photo">Favorite photo</h2>
+
+<p>Ariana’s H2O molecule using a cherry tomato, 2 paperclips, and 2 blueberries:</p>
+
+<p><img src="/img/2020/PuzzleSafari_H2O.jpg" alt="H2O Model" style="width: 30%" title="H2O Model" /></p>
+</div>
+
+		<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        
+          <h4>Comments</h4>
+
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2020/07/19/puzzle-safari.html" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
+         -->
+
+	</article>
+
+	<article>
+
+        <header>
             <h2><a href="/2019/11/10/dominion-tournament-3rdplace.html">3rd place match -- Dominion Online tournament 2019</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="2019-11-10">Nov 10, 2019</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
@@ -221,342 +472,6 @@ I lost 2 to 4 and definitely misplayed, especially in game 4. I won games 2 and 
           <h4>Comments</h4>
 
           <div class="fb-comments" data-href="http://cdstanford.github.io/2019/11/10/dominion-tournament-3rdplace.html" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2019/11/03/dominion-tournament-semifinals.html">Semifinals -- Dominion Online tournament 2019</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2019-11-03">Nov 03, 2019</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/games">games</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#games">games</a> --> <!-- getting this to work would be most ideal -->
-				
-				<a href="/tags/dominion">dominion</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#dominion">dominion</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2019/11/03/dominion-tournament-semifinals.html"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2019/11/03/dominion-tournament-semifinals.html>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p>After a close match against one of the very top seeded players going to game 7 tiebreaker, I finally lost a game! I will play one more match, to determine whether I get 3rd or 4th place. Previous post about round 6 (quarterfinals) is <a href="/2019/10/27/dominion-tournament-quarterfinals">here</a>.</p>
-
-<p>I won games 2, 4, and 6. In Games 1 through 5 we played similar strategies and there was a fair amount of luck, but both of us made some definite misplays. In Game 6 I played a completely different strategy that seemed to win convincingly. In Game 7 I played significantly worse.</p>
-
-<hr />
-
-<p><em>For each kingdom, try to guess the most valuable cards, i.e. which cards are most important to the best strategy. For reference, a list of all Dominion cards can be found <a href="http://wiki.dominionstrategy.com/index.php/List_of_cards">here</a>. Good luck!</em></p>
-
-<h3 id="game-1">Game 1</h3>
-
-<p><img src="/img/2019/dominion-tournament-round7/kingdom1.png" alt="Kingdom 1" style="width: 80%" title="Kingdom 1" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Encampment, Sentry, Dismantle.</p>
-
-<p>Encampment is the only draw here, so I cared a lot about the split (there are only 5 Encampments to go around) and opened Encampment/Dismantle to get an early Gold. Dismantling Estates into Copper and Gold is usually bad, but I made an exception here in order to try activating Encampments early on. Then I aggressively bought Encampments in the following turns, with 1 Masquerade.</p>
-
-<p>However my opponent had 5/2 and opened Sentry/Encampment, then playing Sentry on turns 3, 4, and 5 to become very well-trashed, which was just too strong. In response to this, I had to make risky Encampment plays, hoping to find Gold, but that didn't work out (after doing this twice, and I think it was necessary to risk, the Encampment split went from 3/2 to 1/4).</p>
-
-<p>Some spectators didn't like the Dismantle opening but I think I still like it; getting the Encampment split 3 to 2 seems really valuable to me as it is the only draw, and if you can activate them early with Golds then they are not just dead cards in your deck. No one got Band of Misfits but with an early 5 (maybe the second 5, after Sentry) it is a very flexible terminal, it can be Masquerade, Amulet, or Dismantle, whichever is most useful at the time.</p>
-
-</details>
-
-<h3 id="game-2">Game 2</h3>
-
-<p><img src="/img/2019/dominion-tournament-round7/kingdom2.png" alt="Kingdom 2" style="width: 80%" title="Kingdom 2" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Recruiter, Tragic Hero, Bank.</p>
-
-<p>You can (almost) ignore everything else here. I think Fishing Village is a trap; Actions look nice but the game doesn't last long enough, Silver is better for hitting price points. With Borrow, you open Recruiter, probably with Silver or Sage. Then you just aggressively buy the Tragic Hero stack. When a Tragic Hero pops, it becomes a Bank, and you buy several more Tragic Heroes until they are gone. Then on your last turn you should have played several Tragic Heroes, put several Banks in play, and had enough money for 5 Provinces. I won this. I was also always considering Junk Dealer but there's no time, and besides, trashing the coppers on a big turn hurts your economy since it reduces the value of Bank.</p>
-
-</details>
-
-<h3 id="game-3">Game 3</h3>
-
-<p><img src="/img/2019/dominion-tournament-round7/kingdom3.png" alt="Kingdom 3" style="width: 80%" title="Kingdom 3" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Highway, Counterfeit, Recruiter, Armory.</p>
-
-<p>Highway is on the board and there's gains (Counterfeit and Armory), so this board is about getting lots of Highways and gaining 8 Provinces. Lots of things help along the way; Recruiter and Counterfeit are good trashing, Pooka helps a lot once you have a couple villagers saved, and Scrying Pool is really efficient draw.</p>
-
-<p>Cursed Gold from Pooka makes the opening more interesting. I opened Recruiter/Armory on 5/4; opponent opened Recruiter/Oasis on 6/3. My Recruiter missed the second shuffle, but the Armory also didn't necessarily work out so well. My plan was to gain Potion with it and go for Scrying Pools, but based on the game I think maybe you wait a few turns to get Armory, once you can use it with Highway to gain 5s.</p>
-
-</details>
-
-<h3 id="game-4">Game 4</h3>
-
-<p><img src="/img/2019/dominion-tournament-round7/kingdom4.png" alt="Kingdom 4" style="width: 80%" title="Kingdom 4" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Cursed Village, Storeroom, University, Recruiter.</p>
-
-<p>So many Recruiter boards. This board also has the Cursed Village/Storeroom combo. Urchin is a trap I think; we both skipped it on the opening. The problem is if your Urchins don't collide you are very sad compared to someone who opens with Storeroom/Potion (for example) to make a smooth second shuffle buying University. And then once they have Cursed Villages, the discard attack doesn't hurt them and might help them. The Mercenary trashing is good for you, but it's not clear there is time for it.</p>
-
-<p>I opened Storeroom/Silver and opponent opened Storeroom/Potion; then we both get 2 Universities, a Recruiter, and Cursed Villages and Storerooms (in some order). Recruiter makes Storeroom really nice because you can play it first if you don't have a Cursed Village in hand. I was ahead but almost lost this; my opponent had a pile-out but misplayed it. Maybe I also had a pile-out on the previous turn, but it was hard to say.</p>
-
-</details>
-
-<h3 id="game-5">Game 5</h3>
-
-<p><img src="/img/2019/dominion-tournament-round7/kingdom5.png" alt="Kingdom 5" style="width: 80%" title="Kingdom 5" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Highway, Forager. Honorable Mention: Lost City and Courtyard.</p>
-
-<p>Another Highway board with +Buy, so the goal is to get Highways and trash down with Forager, then buy 8 Provinces. I don't think I totally misplayed this, but my opponent built more efficiently and was ahead. I opened Forager/Silver because I want to hit 5 early, then bought a second Forager and third later. Opponent opened Jester/Courtyard (you have to buy something on 5/2 and Jester makes some sense). We both got 2 Lost Cities but I think only getting 1 might be OK here, Highway might just be better. Also you get Markets once you are trashed down and need the +Buy in place of Forager, but at that point the game is already basically over due to piles.</p>
-
-</details>
-
-<h3 id="game-6">Game 6</h3>
-
-<p><img src="/img/2019/dominion-tournament-round7/kingdom6.png" alt="Kingdom 6" style="width: 80%" title="Kingdom 6" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Research, Treasure Trove, Counterfeit, Goons.</p>
-
-<p>There are no actions, but Research is technically draw. It needs food to trash and set aside a lot of cards -- Gold is perfect for this, and Treasure Trove gains Golds. So you can combine these to play a deck which draws a lot of cards every turn (half the deck, roughly), and plays Goons hopefully every turn, and uses Counterfeit and Upgrade to trash extra Coppers and such.</p>
-
-<p>The difficulty is that a money strategy should be very fast as well, just buying a lot of money cards with Counterfeit, Goons, Treasure Trove. This is what my opponent did, and also got Marauder to junk me, although it seems the Marauder wasn't too effective in the end (there is not enough time to play terminals other than Goons, I guess).</p>
-
-<p>It was cool to see my more-interesting deck win in the end! I made some misplays but still bought enough points over two turns (3 provinces, 3 duchies, and an estate I believe). It was close, but if I had not misplayed, based on spectator comments, I think my deck strategy is a lot better and it would not have been close.</p>
-
-</details>
-
-<h3 id="game-7">Game 7</h3>
-
-<p><img src="/img/2019/dominion-tournament-round7/kingdom7.png" alt="Kingdom 7" style="width: 80%" title="Kingdom 7" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Donate, Peasant, Artisan, Knights, Torturer.</p>
-
-<p>I was player 1 on a Donate board, so I should be basically guaranteed to win this, but after an early unlucky draw on turn 5, I thought I was behind and some of my plays were quite questionable.</p>
-
-<p>Turn 1 is buy Peasant and turn 2 is donate down to 4 coppers and a Peasant. Except if you have 5/2 you can Donate turn 1, buy Peasant turn 2 which is even better. Then you want Artisan as fast as possible. From here is where I messed up; I got Mystic instead of Artisan to be safe so that my shuffle was guaranteed, which seems reasonable, but then I got more Mystic and Shanty Town, basically as utility cards to line up shuffles when I should have just gone straight for Torturer and Acting Troupe to start drawing and attacking. My opponent got Torturer and Acting Troupe in play faster, with a couple Artisans and Disciple to gain stuff. From there, you get Knights, and once you play a few knights it's completely devastating. My deck was trashed down to 6 cards, and from there it is mainly trying desperate things in hopes of an early pile-out or something.</p>
-
-</details>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2019/11/03/dominion-tournament-semifinals.html" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2019/10/27/dominion-tournament-quarterfinals.html">Quarterfinals -- Dominion Online tournament 2019</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2019-10-27">Oct 27, 2019</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/games">games</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#games">games</a> --> <!-- getting this to work would be most ideal -->
-				
-				<a href="/tags/dominion">dominion</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#dominion">dominion</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2019/10/27/dominion-tournament-quarterfinals.html"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2019/10/27/dominion-tournament-quarterfinals.html>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p>I won 4 to 3 in the quarterfinals! This was the 6th round, and now there are only 4 players left. Previous post about round 5 is <a href="/2019/10/17/dominion-tournament-round5">here</a>.</p>
-
-<hr />
-
-<p><em>For each kingdom, try to guess the most valuable cards, i.e. which cards are most important to the best strategy. For reference, a list of all Dominion cards can be found <a href="http://wiki.dominionstrategy.com/index.php/List_of_cards">here</a>. Good luck!</em></p>
-
-<h3 id="game-1">Game 1</h3>
-
-<p><img src="/img/2019/dominion-tournament-round6/kingdom1.png" alt="Kingdom 1" style="width: 80%" title="Kingdom 1" /></p>
-
-<p>Druid has Moon’s Gift, Flame’s Gift, and Mountain’s Gift set aside.</p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Chariot Race, Forum, Baker, Recruiter, Magic Lamp.</p>
-
-<p>There is no draw, but Forum and Chariot Race work well together to allow us to set up points every turn if we are careful about it, especially if opponent gets unlucky. Baker is good because there is nothing better to build to, it doesn't reduce hand size and it allows stockpiling coffers for having a double-Province pile out threat. Recruiter and Magic Lamp are good for the usual reasons: excellent in the early game to accelerate Estate trashing and gain a lot of good cards at once when the Lamp pops. Druid is also good to get because it has Flame's Gift for copper trashing and gives +Buy.</p>
-
-<p>I was behind early because my opponent popped Lamp first, but later I was ahead because I had Bakers and opponent didn't, so I had a lot of coffers to win on the last turn. I made a pretty bad endgame misplay that thankfully didn't cost me the game.</p>
-
-</details>
-
-<h3 id="game-2">Game 2</h3>
-
-<p><img src="/img/2019/dominion-tournament-round6/kingdom2.png" alt="Kingdom 2" style="width: 80%" title="Kingdom 2" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Amulet, Menagerie, Pathfinding, Devil's Workshop. Honorable mention: Warehouse.</p>
-
-<p>Initial observations about the board: (1) Limited on gains -- there is no way to double-Colony in a turn, but there are some restricted ways to gain extra cards, like Sculptor, Devil's Workshop, Amulet, Duplicate, and I suppose Contraband. (2) Limited on actions -- the only way to play multiple terminals is by saving up villagers with Sculptor, which looks difficult. (3) Draw is excellent, mainly Pathfinding looks good, and the best Pathfinding target looks like Menagerie (turning it into a better-than-lab). Menagerie/Warehouse also looks like a reasonably strong interaction. (4) Amulet is premium trashing.</p>
-
-<p>Building for something strange like Sculptor villagers or Duplicate gains seems not worth it for two reasons: Wall (means lots of minus points) and Colony/Platinum (means small amounts of points don't matter so much compared to just getting Colonies).</p>
-
-<p>So we elect to play with a very clean deck of 2 Amulets, Menageries with Pathfinding and a couple Warehouses, enough money to get Platinum and then Colony, and Devil's Workshop to gain a Menagerie every turn. I also played with a second Devil's Workshop to get some imps, later trashing it to save Wall points. I got a super lucky early draw with Menagerie triggering for +3 cards twice, allowing me to buy Pathfinding early. This probably decided the game, but my opponent also made some very strange buys like Caravan Guard and didn't go for Pathfinding on Menagerie, which seems like really the thing to do here.</p>
-
-</details>
-
-<h3 id="game-3">Game 3</h3>
-
-<p><img src="/img/2019/dominion-tournament-round6/kingdom3.png" alt="Kingdom 3" style="width: 80%" title="Kingdom 3" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Overlord, Mountebank, Remake.</p>
-
-<p>If you can get an early lead on this board, you can play 2 or 3 mountebanks a turn and completely drown the opponent's deck in junk. So the goal is to trash down as much as possible and play Mountebank every turn.</p>
-
-<p>Remake open is clear; I also bought Ferry on Mountebank which I think was a mistake; I think Overlord is better. Overlord is very flexible; you can trash if you need to do more trashing, play it as Recruiter if it collides with another action, and play it as Mountebank if you want to attack. I think getting about 2 Overlords early is crucial. I lost partly because I didn't get the Overlords, but also because my Remake missed the shuffle, so I ended up behind and being drowned in junk. Commentators seemed less critical of my play than I thought, so maybe it was mainly the Remake missing.</p>
-
-</details>
-
-<h3 id="game-4">Game 4</h3>
-
-<p><img src="/img/2019/dominion-tournament-round6/kingdom4.png" alt="Kingdom 4" style="width: 80%" title="Kingdom 4" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Peddler, Training, Pixie, and Candlestick Maker. Possible honorable mentions: Minion, Talisman?</p>
-
-<p>Peddler looks really good especially with Training, so we want to hit several actions in play with several buys early. That makes an early Candlestick Maker or two good (I even opened Candlestick Maker), and that also makes Pixie could because several of the boons help a lot with this: Swamp's Gift (getting Wisps that can help with having actions in play), and Forest's Gift (landing it on the right turn means two more Peddlers).</p>
-
-<p>Both of us got Plan on Pixie early to help trash more quickly, buying Pixies and Candlestick Makers. I bought Minion, which I think paid off for the attack; a single Shanty Town early on is also quite good (I opened it) because it is guaranteed to draw. However, my opponent got the right boons at the right time, so was very ahead on Peddlers, and had Training on Peddler as well, and it was too hard to catch up from there. Something I'm wondering about is whether early Talisman is good; some Spectators brought it up as a possible option, as it allows draining Pixies or Peddlers very quickly. I bought it only later as a pile-out threat, but I was already behind and had not enough economy, so my opponent just bought Province and I had no effective response to that.</p>
-
-</details>
-
-<h3 id="game-5">Game 5</h3>
-
-<p><img src="/img/2019/dominion-tournament-round6/kingdom5.png" alt="Kingdom 5" style="width: 80%" title="Kingdom 5" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Steward, Patron, Watchtower, and Dominate. Honorable mention: Forum.</p>
-
-<p>This is my favorite board from the set. There is premium trashing (Steward or Amulet). But there are no actions besides Patron villagers, and no consistent way to draw. So the question is, how can you build to Dominate, if at all? (Building to Dominate usually wins, if it is possible, because Dominate is just a ton of points.)</p>
-
-<p>There are basically two ways. One of them is to use Forum and Crypt with several Golds in deck; Forum can sift through and find the Golds, and Crypt can set aside money to give you a six-card hand for the next several turns. The other way is to use Patron and Watchtower: Patron can save up villagers early, then you build to a deck of like, 6 Patrons, a Watchtower or maybe 2, and Steward (leftover from trashing stuff), with everything else trashed.</p>
-
-<p>My opponent went for the Forum/Crypt idea, and I built the Patron/Watchtower deck. Patron/Watchtower in the end was stronger. I also had 2 Forums to help sift through and find the right hand to kick off. But it was a close game: we both hit Dominate on I think 3 consecutive turns, but finally on the 4th turn my opponent missed Dominate.</p>
-
-</details>
-
-<h3 id="game-6">Game 6</h3>
-
-<p><img src="/img/2019/dominion-tournament-round6/kingdom6.png" alt="Kingdom 6" style="width: 80%" title="Kingdom 6" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Sculptor, Magic Lamp. Honorable Mention: Werewolf, Hunting Grounds, Conquest?</p>
-
-<p>This is a messy and difficult board. Again no +actions except Sculptor villages (how does this keep happening?). So the natural deck to build is basically Money, with some good cards for that being Poacher and Sculptor.</p>
-
-<p>Sculptor has some nice interactions however: if it gains Silver you can save up a few villagers, which makes Werewolf or Hunting Grounds pretty good to buy. And if you happen to line up several Sculptors, as well as maybe a Wine Merchant, you can double Conquest for a lot of points. For example, 3 Sculptors + Wine Merchant means 5 + 7 = 12 VP.</p>
-
-<p>The other thing about the board is Orchard points: you want 3 of, at least, Poacher, Secret Cave, and Sculptor, probably Werewolf also. So you end up building this really messy deck with a bunch of treasures and lots of actions. Werewolf is maybe nicer than Hunting Grounds because if you don't have the villagers to waste on it, you can just use it to attack. I lost probably because I went to hard for Orchard points; I bought 3 Wine Merchants, which just clog the deck basically, and I didn't save enough villagers to pull enough good Conquest turns to catch up, while my opponent was just Provincing.</p>
-
-<p>I am curious if playing for a big megaturn here is viable (with Sculptor and Conquest points). You want to have a few Sculptors and Wine Merchants in deck, and several Werewolves and Hunting Grounds. In the game, it was not possible for me to go for this because I didn't save enough villagers; I used a couple villagers in order to pop Magic Lamp.</p>
-
-</details>
-
-<h3 id="game-7">Game 7</h3>
-
-<p><img src="/img/2019/dominion-tournament-round6/kingdom7.png" alt="Kingdom 7" style="width: 80%" title="Kingdom 7" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Lackeys, Sentry, Count, Grand Market, Throne Room, Poor House.</p>
-
-<p>I won this as second player, and this is the kind of board where first player should generally win. We both got Lackeys Silver on the open, and Sentry as first 5, but I got Count as the second 5, which seemed to pay off. Sentry only lets you trash from deck, and Count means you can trash from hand which is very valuable, and then once you are thin you can hit Grand Market very soon after. Lackeys is for early accelerating turns to hit good price points and trashing.</p>
-
-<p>Once you are trashed down you just want to hit Grand Market as soon as possible, and soon after Poor House, Throne Room, etc. I'm not convinced by Bazaar (I don't want it here, would rather have Throne Room on Grand Market for actions, with Lackeys to help).</p>
-
-</details>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2019/10/27/dominion-tournament-quarterfinals.html" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
          -->
 
 	</article>
