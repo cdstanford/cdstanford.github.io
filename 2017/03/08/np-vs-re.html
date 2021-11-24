@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Is NP to P as RE is to R? |  Caleb Stanford Blog</title>
+        <link rel="stylesheet" href="/style.css" />
+        <meta name="description" content="Personal website and blog"/>
+        <meta name="author" content="Caleb Stanford"/>
+        <link rel="author" href="humans.txt"/>
+
+        <!-- Facebook comment plugin. Two options for moderation. -->
+        <meta property="fb:app_id" content="340544043003976" />
+        <!-- <meta property="fb:admins" content="10210277106142031"/> -->
+
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
+
+        <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
+        <link rel="stylesheet" href="/resources/fontello/css/animation.css">
+        <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+
+        <!-- Google Analytics -->
+        
+
+    </head>
+
+    <!-- MATHJAX! -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+    <body>
+        <header>
+            <h1><a href="/">Caleb Stanford Blog</a></h1>
+            <!-- <h2>New posts always eventually.</h2> -->
+            <hr />
+        </header>
+
+            <nav>
+
+            <h3>Site</h3>
+            <ul>
+                <li><i class="icon-home"></i> <a href="/">Home</a></li>
+                <li><i class="icon-popup"></i> <a href="https://cis.upenn.edu/~castan">Research</a></li>
+                <li><i class="icon-user"></i> <a href="/about">About</a></li>
+                <li><i class="icon-trash"></i> <a href="/misc">Miscellaneous</a></li>
+            </ul>
+
+            <h3>Posts</h3>
+            <ul>
+                <li><i class="icon-tag"></i> <a href="/tags">By tag</a></li>
+                <li><i class="icon-list"></i> <a href="/archive">By date</a></li>
+                <!-- Uncomment if I decide I want rss. -->
+                <!-- <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li> -->
+            </ul>
+            <!-- <h3>Blog links</h3>
+            <ul>
+                <li><i class="icon-list"></i>     <a href="/archive">Archive</a></li>
+                <li><i class="icon-list"></i>     <a href="/archive">Archive</a></li>
+            </ul> -->
+
+
+            <!-- <h3>Links</h3>
+            <ul>
+                <li><i class="icon-link"></i>   <a href="#">Link 1</a></li>
+                <li><i class="icon-link"></i>   <a href="#">Link 2</a></li>
+                <li><i class="icon-link"></i>   <a href="#">Link 3</a></li>
+            </ul> -->
+        </nav>
+
+        <main>
+
+            <article>
+        <header>
+            <h2>Is NP to P as RE is to R?</h2>
+            <span><i class="icon-clock"></i><time datetime="2017-03-08">Mar 08, 2017</time></span><br/>
+            <!-- Icon for last edited. Decided to move this to the bottom instead. -->
+            <!-- 
+                <span><i class="icon-clock"></i><time datetime="2017-05-21">May 21, 2017</time></span><br/>
+             -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span></br> --> <!-- Uncomment if I ever decide I want multiple authors -->
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+            <!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/math">math</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/theory-of-computation">theory-of-computation</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#theory-of-computation">theory-of-computation</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+        </header>
+
+        <div class="entry"><p>If you are familiar with theory of computation, perhaps you have caught yourself thinking of the relationship between NP and P as analogous to the relationship between RE and R.
+That is, nondeterministic polynomial-time is to polynomial-time as Turing-recognizable is to Turing-decidable.
+I certainly have thought this, and I think it’s because I visualize NP as a “positive” extension of P, with counterpart coNP,
+just as RE is a “positive” extension of R with counterpart coRE.</p>
+
+<p>On the face of it, this rather seems like a misconception.
+NP is formed from P by introducing nondeterminism, whereas RE is formed from R by introducing
+non-halting behavior, and these are quite different concepts.
+In particular, if we add non-halting behavior to poly-time TMs, by requiring only that
+the TM runs in poly-time <em>if it halts at all</em>, we still only obtain the class of languages P.
+And on the other hand, non-deterministic TMs are equivalent to deterministic TMs (see e.g. Sipser 2nd edition, Theorem 3.16), so adding non-determinism to decider TMs we expect to remain at the class of languages R.</p>
+
+<p>Nevertheless, <a href="http://stackoverflow.com/a/38536341/2038713">this ignored StackOverflow answer</a> claims a very close analogy in terms of verifiers, where just as NP is the class of languages with polynomial-time verifiers, RE is the class of languages which have verifiers at all.
+In fact this is true, but only if we allow the runtime of the verifier to be unbounded in the length of the original input, which seems like cheating considering that the runtime of a poly-time verifier must be <em>uniformly</em> bounded by a poly-time function in the length of the original input.</p>
+
+<p>At the core of the problem is the definition of <em>runtime</em> and <em>halting / non-halting</em> for nondeterministic and verifier TMs.
+I summarize the discussion with the following table:</p>
+
+<table style="width:90%;">
+  <tr>
+    <th>Model</th>
+    <th>Polynomial bound</th> 
+    <th>Finite bound</th> 
+    <th>Halting</th> 
+    <th>No bound</th>
+  </tr>
+  <tr> <td>         TM</td> <td> P</td> <td>R</td> <td> R</td> <td>RE</td> </tr>
+  <tr> <td> Nondet. TM</td> <td>NP</td> <td>R</td> <td> R</td> <td>RE</td> </tr>
+  <tr> <td>Verifier TM</td> <td>NP</td> <td>R</td> <td>RE</td> <td>RE</td> </tr>
+</table>
+
+<!-- Older plain-text / markdown table
+|    Model    | polynomial bound | finite bound | halting | no bound |
+|:-----------:|:----------------:|:------------:|:-------:|:--------:|
+|      TM     |         P        |       R      |    R    |    RE    |
+|  Nondet. TM |        NP        |       R      |    R    |    RE    |
+| Verifier TM |        NP        |       R      |    RE   |    RE    | -->
+
+<p>Given this, I think the correspondence between P : NP and R : RE is essentially a fluke,
+only present if we use verifiers rather than NTMs and if we only require that they halt,
+not that their runtime has a finite bound.
+The rest of this post just elaborates on and explains the above table.</p>
+
+<h3 id="non-determinism-and-verifiers-in-general">Non-determinism and verifiers, in general</h3>
+
+<p>It is perhaps clearer to think of these concepts in the most general setting.
+Therefore, let us suppose that a <em>model of computation</em>
+begins with a collection of <em>machines</em>, a collection of possible <em>inputs</em>,
+and a collection of possible <em>configurations</em>.
+For any machine \(M\) and input \(w\), there is an <em>initial configuration</em> —
+e.g. for TMs it would be the tuple of the machine \(M\), the initial state \(q_0\), and the initial tape containing \(w\).
+Then we have a <em>step function</em> (or “small-step semantics”) which maps any configuration to a new configuration,
+taking one unit of time.
+Lastly there are some <em>final configurations</em>, which do not step.
+The evaluation of \(M\) on some input \(w\) (i.e., the “big-step semantics”)
+is the final configuration that is ultimately produced by a sequence of small-steps, if it exists.
+Moreover, let’s simplify this so that the output is binary, by saying that all final configurations either <em>accept</em> or <em>reject</em>.</p>
+
+<p>A <em>nondeterministic model of computation</em> is the same but the small-step semantics can map a configuration to multiple possible configurations.
+In this case, \(M\) accepts input \(w\) if it is <em>possible</em> to arrive at an accepting configuration.
+(A discussion for another day is whether there are other reasonable definitions of the language of an NTM. Since there are many possible final configurations, we clearly need some way to aggregate all the configurations into one, and so it is natural to define some outputs to override others. In the standard definition we take accepting to override rejecting. But we could also take, for instance, non-halting behavior to override accepting!)</p>
+
+<p>A <em>verifier model of computation</em> consists of an underlying model of computation, in which inputs are ordered pairs. A verifier machine \(\text{ver}(M)\) starts by mapping the input \(x\) to a new input \((x,w)\), where \(w\) is the witness, feeding that to \(M\). We formally say that \(\text{ver}(M)\) accepts \(x\) if <em>there exists a witness</em> \(w\) for which \(M\) accepts \((x,w)\).</p>
+
+<h3 id="runtime-bounds-for-non-deterministic-and-verifier-tms">Runtime bounds for non-deterministic and verifier TMs</h3>
+
+<p>To obtain \(NP\) from \(P\), we have to understand how to bound the runtime of a verifier (VTM) or nondeterministic TM (NTM) by a polynomial.
+In general, the runtime of a verifier or NTM must be a notion that does not depend on the particular
+branch executed, or the particular witness string.</p>
+
+<p>If \(f(n)\) is some general function of \(n\), we can say that an NTM’s runtime is bounded by \(f(n)\) if, on any input of size \(n\), there is no branch with length longer than \(f(n)\) (including non-halting branches).
+A VTM’s runtime is bounded by \(f(n)\) if, on any input of size \(n\) and any witness,
+the runtime is bounded by \(f(n)\).</p>
+
+<p>Using this definition, if we require \(f\) to be a polynomial, then NTMs and VTMs both give us NP.
+And then if we allow \(f\) to return any finite value (so, the runtime has to be bounded by a fixed function of the input),
+then both NTMs and VTMs give us R.
+The constant bound on the runtime means that we can simply try all possible branches
+or all possible witnesses with a deterministic TM, and that TM will always halt.</p>
+
+<p>But the difference between NTMs and VTMs arises if we formally require the strict bound \(f(n) = \infty\). What this is saying is that all branches of the NTM are halting, and that the VTM halts on every input, witness pair. For NTMs, we can still simulate this with a deterministic TM, because if all branches of an NTM are halting, then we can try all of them and we will eventually halt.
+But for a VTM, we cannot try all witnesses, because there are infinitely many! It does not really matter that the VTM
+halts on each individual one.
+With a VTM, requiring the TM to always halt is no barrier to us checking a Turing-recognizable but not decidable property, because we get an existential quantification over <em>all finite strings</em> (an infinite set) for free.</p>
+
+<p>So we can say that RE is the set of languages recognized by a verifier
+TM which always halts.
+But this is somewhat dubious because maybe the “right” definition of the runtime of a verifier TM is the <em>supremum</em> over all witnesses, in which case a verifier for a language in RE but not in R will have runtime \(\infty\).
+And maybe the right definition of a halting verifier is one whose runtime is finite.
+Under this definition, the subtle difference between NTMs and VTMs, highlighted in the original table, would disappear.</p>
+
+<h3 id="references">References</h3>
+
+<p>My definition of a decider / halting NTM does agree with Sipser 2nd edition, page 152, where he requires that a decider NTM halt on all branches. Sipser page 255 only defines the runtime for decider NTMs.
+<a href="http://cs.stackexchange.com/q/6253/24088">This CS StackExchange thread</a> also gives several different definitions of a nondeterministic decider, which are all equivalent and recognize R.
+As for verifiers, on Sipser page 265 it is suggested (but only really for the polynomial case) that the runtime for verifiers should be the supremum over all witnesses.</p>
+
+<p>In descriptive complexity, <a href="https://en.wikipedia.org/wiki/Fagin's_theorem">Fagin’s theorem</a>
+shows that NP arises from P
+essentially by allowing existentially-quantified second-order variables.
+On the other hand, RE arises from R by allowing existential quantification over \(\mathbb{N}\).</p>
+
+<p><a href="http://cs.stackexchange.com/q/33892/24088">This old CS StackExchange question</a> seems to me a great question which is asking what I asked, but its answer does not really say anything.
+<a href="http://tau-cm2013.wikidot.com/forum/t-674853/re-r-co-re-p-np-co-np">This post in hebrew</a> might be mildly relevant but I can’t read it.</p>
+
+            
+            <div><i>Edited on <time datetime="2017-05-21">May 21, 2017</time>.</i></div>
+            
+        </div>
+
+
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        
+          <hr/>
+          <h4>Comments</h4>
+
+          <div class="fb-comments" data-href="http://cdstanford.github.io/2017/03/08/np-vs-re.html" data-colorscheme="light" data-num-posts="10" data-width="706"></div>
+        
+
+        <footer><!-- additional info --></footer>
+
+</article>
+
+
+        </main>
+
+        <footer>
+            <hr />
+            <!-- <p>Caleb Stanford, <time>2017</time>.</p> -->
+        </footer>
+
+        <script src="/scripts.js"></script>
+    </body>
+
+</html>
