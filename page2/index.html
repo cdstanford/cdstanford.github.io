@@ -2,22 +2,18 @@
 
 <html>
     <head>
+        <!-- Metadata -->
         <meta charset="utf-8"/>
         <title> Home |  Caleb Stanford Blog</title>
-        <link rel="stylesheet" href="/style.css" />
         <meta name="description" content="Personal website and blog"/>
         <meta name="author" content="Caleb Stanford"/>
-        <link rel="author" href="humans.txt"/>
+        <link rel="author" href="/humans.txt"/>
 
-        <!-- Facebook comment plugin. Two options for moderation. -->
-        <meta property="fb:app_id" content="340544043003976" />
-        <!-- <meta property="fb:admins" content="10210277106142031"/> -->
-
-        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
-
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/style.css" />
         <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
         <link rel="stylesheet" href="/resources/fontello/css/animation.css">
-        <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
 
         <!-- Google Analytics -->
         
@@ -39,7 +35,7 @@
 
     </head>
 
-    <!-- MATHJAX! -->
+    <!-- MathJax -->
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
     <body>
@@ -54,7 +50,7 @@
             <h3>Site</h3>
             <ul>
                 <li><i class="icon-home"></i> <a href="/">Home</a></li>
-                <li><i class="icon-popup"></i> <a href="https://cis.upenn.edu/~castan">Research</a></li>
+                <li><i class="icon-popup"></i> <a href="https://web.cs.ucdavis.edu/~cdstanford/">Research</a></li>
                 <li><i class="icon-user"></i> <a href="/about">About</a></li>
                 <li><i class="icon-trash"></i> <a href="/misc">Miscellaneous</a></li>
             </ul>
@@ -63,7 +59,7 @@
             <ul>
                 <li><i class="icon-tag"></i> <a href="/tags">By tag</a></li>
                 <li><i class="icon-list"></i> <a href="/archive">By date</a></li>
-                <!-- Uncomment if I decide I want rss. -->
+                <!-- RSS -->
                 <!-- <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li> -->
             </ul>
             <!-- <h3>Blog links</h3>
@@ -90,6 +86,32 @@
 	<article>
 
         <header>
+            <h2><a href="/2021/02/12/on-finite-computational-complexity/">On Finite Computational Complexity</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2021-02-12">Feb 12, 2021</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/research">research</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#research">research</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/logic-and-computation">logic-and-computation</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#logic-and-computation">logic-and-computation</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+        </header>
+
+		<div class="entry"><p>Some notes on an idea for defining better computational complexity for finite languages, using regular languages: <a href="/doc/On_Computational_Complexity_for_Finite_Sets.pdf">here</a>.</p>
+
+<p><em>Edit:</em> Something I didn’t justify very well is why I called this <em>computational</em> complexity; it might be more appropriately called <em>description</em> complexity. But because regular expressions admit efficient evaluation roughly corresponding to their size, description complexity of the minimum regex can be taken as a proxy for the minimum computational resources required, if we restrict computation to that which is expressible using regular languages.</p>
+</div>
+
+	</article>
+
+	<article>
+
+        <header>
             <h2><a href="/2020/07/24/micromort-exposure/">Micromort Exposure</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="2020-07-24">Jul 24, 2020</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
@@ -97,27 +119,10 @@
 			<!-- Tags -->
 			<span class="tags"><i class="icon-tag"></i>
 				
-				<a href="/tags/data">data</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#data">data</a> --> <!-- getting this to work would be most ideal -->
-				
 				<a href="/tags/health">health</a> <!-- no # in the link for now -->
 				<!-- <a href="tags/#health">health</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2020/07/24/micromort-exposure/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2020/07/24/micromort-exposure/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><p>A <a href="https://en.wikipedia.org/wiki/Micromort"><em>micromort</em></a>, or \(\mu M\), is a unit of risk defined as a 1 in a million chance of death.</p>
@@ -185,7 +190,7 @@ Overall, that means an average American of my age experiences about \(\boldsymbo
 (Note that this baseline is not a good estimate of my personal risk, but it serves as a natural reference point.)</p>
 
 <p>Whatever accounts for the bulk of these micromorts, then, we expect will completely dwarf the “minor sources” I listed above. So what are the sources? <a href="https://www.advisory.com/daily-briefing/2019/01/16/deaths#:~:text=From%20ages%201%20to%2044,those%20aged%2065%20and%20over">This chart</a> gives us a rough idea of the major causes for ages 25-44: unintentional injuries (33%), cardiovascular diseases (CVD) (12%, including both heart disease and stroke), cancer (11%), and homicide (6%), roughly in that order, followed by a bunch of other diseases like diabetes, HIV, and influenza.
-<a href="https://www.statista.com/statistics/1113400/us-leading-causes-of-death-25-29-year-old-millennials/">Statista</a> 
+<a href="https://www.statista.com/statistics/1113400/us-leading-causes-of-death-25-29-year-old-millennials/">Statista</a>
 gives a more specific ranking for the age range of 25-29: accidents (45%), suicides (14%), homicide (11%), cancer (4.6%), and CVD (4.5%).
 For this post, I’m ignoring everything except these top 5. The most important question that comes to mind is, what lies in the mysterious “accidents” category?</p>
 
@@ -249,21 +254,6 @@ As a thought experiment, suppose that more risky behaviors would result in an or
 <p><em>Thanks to Kei Nishimura-Gasparian, Ariana Spentzos, and Joseph Stanford for providing feedback on earlier drafts of this post.</em></p>
 </div>
 
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2020/07/24/micromort-exposure/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
 	</article>
 
 	<article>
@@ -276,27 +266,10 @@ As a thought experiment, suppose that more risky behaviors would result in an or
 			<!-- Tags -->
 			<span class="tags"><i class="icon-tag"></i>
 				
-				<a href="/tags/games">games</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#games">games</a> --> <!-- getting this to work would be most ideal -->
-				
 				<a href="/tags/puzzles">puzzles</a> <!-- no # in the link for now -->
 				<!-- <a href="tags/#puzzles">puzzles</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2020/07/19/puzzle-safari/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2020/07/19/puzzle-safari/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><p>One of the fun things about doing an internship at Microsoft has been all the puzzle-hunt related activities they run.
@@ -320,159 +293,6 @@ Yesterday, with a team of four, I participated in the <a href="https://safarilab
 
 <p><img src="/img/2020/PuzzleSafari_H2O.jpg" alt="H2O Model" style="width: 30%" title="H2O Model" /></p>
 </div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2020/07/19/puzzle-safari/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2019/11/10/dominion-tournament-3rdplace/">3rd place match -- Dominion Online tournament 2019</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2019-11-10">Nov 10, 2019</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/games">games</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#games">games</a> --> <!-- getting this to work would be most ideal -->
-				
-				<a href="/tags/dominion">dominion</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#dominion">dominion</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2019/11/10/dominion-tournament-3rdplace/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2019/11/10/dominion-tournament-3rdplace/>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p>Last post about the tournament! This tournament has been a lot of fun. Previous post about round 7 (semifinals) is <a href="/2019/11/03/dominion-tournament-semifinals">here</a>.
-I lost 2 to 4 and definitely misplayed, especially in game 4. I won games 2 and 5.</p>
-
-<hr />
-
-<p><em>For each kingdom, try to guess the most valuable cards, i.e. which cards are most important to the best strategy. For reference, a list of all Dominion cards can be found <a href="http://wiki.dominionstrategy.com/index.php/List_of_cards">here</a>. Good luck!</em></p>
-
-<h3 id="game-1">Game 1</h3>
-
-<p><img src="/img/2019/dominion-tournament-round8/kingdom1.png" alt="Kingdom 1" style="width: 80%" title="Kingdom 1" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Jack of All Trades</p>
-
-<p>Jack/Silver (or Jack/Merchant maybe) open is fairly clear. From there, the right strategy here is probably just money-focused. I tried to do Conclave village with Diplomat, Werewolf, and Council Room (and a few other uniques), but it wasn't fast enough compared to money. Also, we both got nice Mint trashes at some point. Another question is whether you can try to go for a Feodum-based strategy, but probably it's still not fast enough.</p>
-
-</details>
-
-<h3 id="game-2">Game 2</h3>
-
-<p><img src="/img/2019/dominion-tournament-round8/kingdom2.png" alt="Kingdom 2" style="width: 80%" title="Kingdom 2" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Hamlet, Peddler, Triumph. Honorable Mention: Scheme, Bridge Troll.</p>
-
-<p>Interesting board because there's cost reduction and gains, but no draw. So you can only hope to get about 5 gains on a given turn. However, the clear interaction is Peddler/Hamlet: if you can play, say, 4 Hamlets, then you can gain 5 Peddlers. So you want to try to get the entire Peddler stack.</p>
-
-<p>I had some unlucky shuffles and my opponent got Scheme instead of Hamlets, which I didn't like at the time, but now I can see the value in an early Scheme or two; it helps line up actions for Peddler. Inventor on the open is good; one or two Bridge Trolls are good, but the deck can't support too many. Then you just Triumph a turn or two, and the game ends on 3-piles.</p>
-
-</details>
-
-<h3 id="game-3">Game 3</h3>
-
-<p><img src="/img/2019/dominion-tournament-round8/kingdom3.png" alt="Kingdom 3" style="width: 80%" title="Kingdom 3" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Diplomat, Lookout, Squire.</p>
-
-<p>This one I'm less sure of. The question is whether a Jack/Money variant is just better than the engine, as it was in Game 1. I skipped Jack so I could trash more aggressively. I love Lookout here. But I lost  because I didn't get Diplomats quickly enough and so my opponent found a way to empty the remaining 4 diplomats in a turn. Squire goes well with Diplomat and becomes Giant when trashed with Lookout. Giant is what tipped the balance for me to want to play the engine.</p>
-
-</details>
-
-<h3 id="game-4">Game 4</h3>
-
-<p><img src="/img/2019/dominion-tournament-round8/kingdom4.png" alt="Kingdom 4" style="width: 80%" title="Kingdom 4" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Recruiter, Storeroom, Library. Maybe Charm.</p>
-
-<p>I mainly want to just play with the first three cards, but you can play with most of the board here. Fishing Village for some actions (not as good as Recruiter for actions though, probably); Bandit for Golds which can be trashed; Charm is reasonable but I kinda disrespected it, and only opponent got them, I went heavily for Storeroom/Library. Mission could be good here; one of us should have gotten it (allows getting villagers, and paying off Royal Blacksmith debt). Apothecary could also be good early on and interacts with Storeroom nicely.</p>
-
-</details>
-
-<h3 id="game-5">Game 5</h3>
-
-<p><img src="/img/2019/dominion-tournament-round8/kingdom5.png" alt="Kingdom 5" style="width: 80%" title="Kingdom 5" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Haunted Woods, Cargo Ship, Throne Room.</p>
-
-<p>My opponent went solely for Haunted Woods basically; I ended up winning playing the more interesting deck, with Throne Room, Lurker, Nomad Camp, and of course lots of Haunted Woods draw. Awkward and inconsistent but when you can get like 3 Haunted Woods plays in, you draw a LOT the next turn. The real challenge is doing this fast enough to catch up on the Battlefield points. Silk Roads end up being enough to outscore in the end.</p>
-
-</details>
-
-<h3 id="game-6">Game 6</h3>
-
-<p><img src="/img/2019/dominion-tournament-round8/kingdom6.png" alt="Kingdom 6" style="width: 80%" title="Kingdom 6" /></p>
-
-<details>
-<summary>Spoiler:</summary>
-
-<p>Most valuable card(s): Trader, Crop Rotation.</p>
-
-<p>Not much else to do here but Trader/Money. It would be Soothsayer, but the problem is once you have a Trader or two, the opponent doesn't want to buy Soothsayer: it basically says "opponent gains a Silver", which actually helps them, and it's kinda slow for you. Crop Rotation is good and I slept on it a bit. There is also a trick you can do with Villa and Trader (that both of us seem to have missed): gain the Villa and then trash it for a lot of silvers.</p>
-
-</details>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2019/11/10/dominion-tournament-3rdplace/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
 
 	</article>
 
@@ -498,12 +318,6 @@ I lost 2 to 4 and definitely misplayed, especially in game 4. I won games 2 and 
 
         </main>
 
-        <footer>
-            <hr />
-            <!-- <p>Caleb Stanford, <time>2017</time>.</p> -->
-        </footer>
-
-        <script src="/scripts.js"></script>
     </body>
 
 </html>

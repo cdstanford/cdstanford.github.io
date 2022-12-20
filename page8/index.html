@@ -2,22 +2,18 @@
 
 <html>
     <head>
+        <!-- Metadata -->
         <meta charset="utf-8"/>
         <title> Home |  Caleb Stanford Blog</title>
-        <link rel="stylesheet" href="/style.css" />
         <meta name="description" content="Personal website and blog"/>
         <meta name="author" content="Caleb Stanford"/>
-        <link rel="author" href="humans.txt"/>
+        <link rel="author" href="/humans.txt"/>
 
-        <!-- Facebook comment plugin. Two options for moderation. -->
-        <meta property="fb:app_id" content="340544043003976" />
-        <!-- <meta property="fb:admins" content="10210277106142031"/> -->
-
-        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
-
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/style.css" />
         <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
         <link rel="stylesheet" href="/resources/fontello/css/animation.css">
-        <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
 
         <!-- Google Analytics -->
         
@@ -39,7 +35,7 @@
 
     </head>
 
-    <!-- MATHJAX! -->
+    <!-- MathJax -->
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
     <body>
@@ -54,7 +50,7 @@
             <h3>Site</h3>
             <ul>
                 <li><i class="icon-home"></i> <a href="/">Home</a></li>
-                <li><i class="icon-popup"></i> <a href="https://cis.upenn.edu/~castan">Research</a></li>
+                <li><i class="icon-popup"></i> <a href="https://web.cs.ucdavis.edu/~cdstanford/">Research</a></li>
                 <li><i class="icon-user"></i> <a href="/about">About</a></li>
                 <li><i class="icon-trash"></i> <a href="/misc">Miscellaneous</a></li>
             </ul>
@@ -63,7 +59,7 @@
             <ul>
                 <li><i class="icon-tag"></i> <a href="/tags">By tag</a></li>
                 <li><i class="icon-list"></i> <a href="/archive">By date</a></li>
-                <!-- Uncomment if I decide I want rss. -->
+                <!-- RSS -->
                 <!-- <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li> -->
             </ul>
             <!-- <h3>Blog links</h3>
@@ -90,6 +86,55 @@
 	<article>
 
         <header>
+            <h2><a href="/2017/05/21/four-color-theorem/">3 facts about the 4-color theorem</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2017-05-21">May 21, 2017</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/math">math</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+        </header>
+
+		<div class="entry"><p>Here are some facts about the <a href="https://en.wikipedia.org/wiki/Four_color_theorem">four color theorem</a>.</p>
+
+<h3 id="1-there-is-always-a-way-to-color-the-outer-region-as-well">1. There is always a way to color the outer region as well.</h3>
+
+<p>Take a look at this 4-coloring of the US map, from the Wikipedia page:</p>
+
+<p><img src="/img/2017/4-colored US map wikipedia.png" alt="4-colored US map" title="4-colored US map" /></p>
+
+<p>It’s technically suboptimal because white is a color, too, and they used white for the outside!
+For some reason, this bothers me.
+It’s in fact always possible to color the entire map, including the outer region, with 4 colors.
+Here, I did it in Pinta image editor to show you:</p>
+
+<p><img src="/img/2017/4-colored US map including outer region.png" alt="4-colored US map including outer region" title="4-colored US map including outer region" /></p>
+
+<p>(Note that Utah / New Mexico and Arizona / Colorado must be considered non-adjacent for the 4-color theorem to apply.)</p>
+
+<h3 id="2-the-regions-can-have-holes">2. The regions can have holes!</h3>
+
+<p>The 4-color theorem is valid even if not all of the regions are topologically disks; they can have holes. In fact, point #1 was already an example of this, since the outer region has one big hole. But it’s true more generally. However, the regions certainly can’t be “adjacent” to themselves, and also, they must be contiguous regions. Which brings us to:</p>
+
+<h3 id="3-the-theorem-doesnt-technically-apply-to-real-maps-including-the-us-map">3. The theorem doesn’t technically apply to real maps, including the US map.</h3>
+
+<p>Why not? Because real maps have countries and states that are split into multiple non-contiguous parts. In the US,
+that’s just the state of <em>Michigan</em>, but there are probably much worse examples world-wide.
+<a href="https://zyxyvy.wordpress.com/2016/07/25/is-the-world-map-four-colorable/">This blog post</a> discusses it in detail and concludes that, as of July 2016, the globe still happens to be 4-colorable.
+(I guess that means 5-colorable if you include the color of oceans / water.)</p>
+
+<p>Anyway I would def buy a globe that was 5-colored where blue is reserved for all bodies of water and countries which have multiple pieces are colored the same. That would be a cool thing to have.</p>
+</div>
+
+	</article>
+
+	<article>
+
+        <header>
             <h2><a href="/2017/05/16/sleep/">Sleep</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="2017-05-16">May 16, 2017</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
@@ -104,20 +149,6 @@
 				<!-- <a href="tags/#health">health</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2017/05/16/sleep/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2017/05/16/sleep/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><h3 id="life-goal-dont-pull-any-more-all-nighters-for-work">Life goal: Don’t pull any more all-nighters for work.</h3>
@@ -148,21 +179,6 @@ But what I can’t do, and am not going to let myself do, is fail in planning my
 <p>So my goal with the blog is to <strong>write down whatever I’ve been thinking about.</strong> And I also want to <strong>write more.</strong> I don’t want it to be polished, I just want to work on my writing and express my thoughts on things. Hopefully, by focusing on quantity instead of quality, I will start writing every week instead of every couple of months, and over time the quality will get better.</p>
 </div>
 
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2017/05/16/sleep/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
 	</article>
 
 	<article>
@@ -178,24 +194,10 @@ But what I can’t do, and am not going to let myself do, is fail in planning my
 				<a href="/tags/math">math</a> <!-- no # in the link for now -->
 				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
 				
-				<a href="/tags/theory-of-computation">theory-of-computation</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#theory-of-computation">theory-of-computation</a> --> <!-- getting this to work would be most ideal -->
+				<a href="/tags/logic-and-computation">logic-and-computation</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#logic-and-computation">logic-and-computation</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2017/03/08/np-vs-re/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2017/03/08/np-vs-re/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><p>If you are familiar with theory of computation, perhaps you have caught yourself thinking of the relationship between NP and P as analogous to the relationship between RE and R.
@@ -219,9 +221,9 @@ I summarize the discussion with the following table:</p>
 <table style="width:90%;">
   <tr>
     <th>Model</th>
-    <th>Polynomial bound</th> 
-    <th>Finite bound</th> 
-    <th>Halting</th> 
+    <th>Polynomial bound</th>
+    <th>Finite bound</th>
+    <th>Halting</th>
     <th>No bound</th>
   </tr>
   <tr> <td>         TM</td> <td> P</td> <td>R</td> <td> R</td> <td>RE</td> </tr>
@@ -304,74 +306,6 @@ On the other hand, RE arises from R by allowing existential quantification over 
 <a href="http://tau-cm2013.wikidot.com/forum/t-674853/re-r-co-re-p-np-co-np">This post in hebrew</a> might be mildly relevant but I can’t read it.</p>
 </div>
 
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2017/03/08/np-vs-re/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2017/01/18/umo-announcement/">2017 Utah Math Olympiad Announcement</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2017-01-18">Jan 18, 2017</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/utah-math-olympiad">utah-math-olympiad</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#utah-math-olympiad">utah-math-olympiad</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2017/01/18/umo-announcement/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2017/01/18/umo-announcement/>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p>We <a href="http://www.utmath.org/">just announced</a> the that the date of the fifth Utah Math Olympiad will be March 18, 2017.</p>
-
-<p>Check out <a href="/doc/2017/2017-umo-flyer.pdf">the flyer</a>,
-which contains a cute sample problem about tiling with rectangles!</p>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2017/01/18/umo-announcement/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
 	</article>
 
 
@@ -396,12 +330,6 @@ which contains a cute sample problem about tiling with rectangles!</p>
 
         </main>
 
-        <footer>
-            <hr />
-            <!-- <p>Caleb Stanford, <time>2017</time>.</p> -->
-        </footer>
-
-        <script src="/scripts.js"></script>
     </body>
 
 </html>

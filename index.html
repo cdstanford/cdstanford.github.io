@@ -2,22 +2,18 @@
 
 <html>
     <head>
+        <!-- Metadata -->
         <meta charset="utf-8"/>
         <title> Home |  Caleb Stanford Blog</title>
-        <link rel="stylesheet" href="/style.css" />
         <meta name="description" content="Personal website and blog"/>
         <meta name="author" content="Caleb Stanford"/>
-        <link rel="author" href="humans.txt"/>
+        <link rel="author" href="/humans.txt"/>
 
-        <!-- Facebook comment plugin. Two options for moderation. -->
-        <meta property="fb:app_id" content="340544043003976" />
-        <!-- <meta property="fb:admins" content="10210277106142031"/> -->
-
-        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
-
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/style.css" />
         <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
         <link rel="stylesheet" href="/resources/fontello/css/animation.css">
-        <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
 
         <!-- Google Analytics -->
         
@@ -39,7 +35,7 @@
 
     </head>
 
-    <!-- MATHJAX! -->
+    <!-- MathJax -->
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
     <body>
@@ -54,7 +50,7 @@
             <h3>Site</h3>
             <ul>
                 <li><i class="icon-home"></i> <a href="/">Home</a></li>
-                <li><i class="icon-popup"></i> <a href="https://cis.upenn.edu/~castan">Research</a></li>
+                <li><i class="icon-popup"></i> <a href="https://web.cs.ucdavis.edu/~cdstanford/">Research</a></li>
                 <li><i class="icon-user"></i> <a href="/about">About</a></li>
                 <li><i class="icon-trash"></i> <a href="/misc">Miscellaneous</a></li>
             </ul>
@@ -63,7 +59,7 @@
             <ul>
                 <li><i class="icon-tag"></i> <a href="/tags">By tag</a></li>
                 <li><i class="icon-list"></i> <a href="/archive">By date</a></li>
-                <!-- Uncomment if I decide I want rss. -->
+                <!-- RSS -->
                 <!-- <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li> -->
             </ul>
             <!-- <h3>Blog links</h3>
@@ -90,6 +86,36 @@
 	<article>
 
         <header>
+            <h2><a href="/2022/12/20/ucd-website/">UC Davis Website</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2022-12-20">Dec 20, 2022</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/research">research</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#research">research</a> --> <!-- getting this to work would be most ideal -->
+				
+				<a href="/tags/this-blog">this-blog</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#this-blog">this-blog</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+        </header>
+
+		<div class="entry"><p>Check out my <a href="https://web.cs.ucdavis.edu/~cdstanford/">new website</a> at the University of California, Davis!</p>
+
+<p>I’ve accepted a position as assistant professor at UC Davis starting summer 2023. 🌞🌞🌞
+So, you can generally find the most up-to-date information about me at my UC Davis page.
+I may or may not post here for the short- and long-term future.</p>
+
+<p>By the way, I’m hiring PhD students! 🙂 I would love to hear from you if you’re interested in getting a PhD in programming languages research.</p>
+</div>
+
+	</article>
+
+	<article>
+
+        <header>
             <h2><a href="/2021/11/24/research-areas/">Research areas</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="2021-11-24">Nov 24, 2021</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
@@ -101,20 +127,6 @@
 				<!-- <a href="tags/#research">research</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2021/11/24/research-areas/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2021/11/24/research-areas/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><p>I’m on the academic job market this year, and have spent the last few months writing (and rewriting) application materials. It’s a process that really makes you figure out who you are as a researcher and it’s turned out to be surprisingly useful and fun. I designed a diagram of my research areas (actually, credits to Ariana for the final image, she made it in ChemDraw!) and I’m really happy with the way it turned out! See below (this is Figure 2 in my research statement):</p>
@@ -124,21 +136,6 @@
 <p>I am thinking of making some visualizations of my research in other ways, maybe not for the research statement, but perhaps for my website.
 I have spreadsheet data for all the papers I’ve ever submitted, with conference tiers, rejections, areas, etc. and that could make for some interesting summary tables.</p>
 </div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2021/11/24/research-areas/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
 
 	</article>
 
@@ -156,20 +153,6 @@ I have spreadsheet data for all the papers I’ve ever submitted, with conferenc
 				<!-- <a href="tags/#research">research</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2021/11/23/software-psa/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2021/11/23/software-psa/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><p><strong>PSA:</strong> vetted installation instructions and <code class="language-plaintext highlighter-rouge">examples/</code> directory considered mandatory</p>
@@ -179,76 +162,6 @@ I have spreadsheet data for all the papers I’ve ever submitted, with conferenc
 <p>Besides installation, all software should have an <code class="language-plaintext highlighter-rouge">examples/</code> directory.
 I am surprised by how often I come across software that doesn’t, and I spend several minutes poking around trying to understand the software without much luck. A basic <code class="language-plaintext highlighter-rouge">examples/</code> helps a lot more than well-documented code, unit tests, or even a <code class="language-plaintext highlighter-rouge">README</code> because it’s the first place I will go to see how I might actually use your project for some intended use case.</p>
 </div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2021/11/23/software-psa/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2021/02/12/on-finite-computational-complexity/">On Finite Computational Complexity</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2021-02-12">Feb 12, 2021</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/logic">logic</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#logic">logic</a> --> <!-- getting this to work would be most ideal -->
-				
-				<a href="/tags/research">research</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#research">research</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2021/02/12/on-finite-computational-complexity/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2021/02/12/on-finite-computational-complexity/>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p>Some notes on an idea for defining better computational complexity for finite languages, using regular languages: <a href="/doc/On_Computational_Complexity_for_Finite_Sets.pdf">here</a>.</p>
-
-<p><em>Edit:</em> Something I didn’t justify very well is why I called this <em>computational</em> complexity; it might be more appropriately called <em>description</em> complexity. But because regular expressions admit efficient evaluation roughly corresponding to their size, description complexity of the minimum regex can be taken as a proxy for the minimum computational resources required, if we restrict computation to that which is expressible using regular languages.</p>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2021/02/12/on-finite-computational-complexity/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
 
 	</article>
 
@@ -267,12 +180,6 @@ I am surprised by how often I come across software that doesn’t, and I spend s
 
         </main>
 
-        <footer>
-            <hr />
-            <!-- <p>Caleb Stanford, <time>2017</time>.</p> -->
-        </footer>
-
-        <script src="/scripts.js"></script>
     </body>
 
 </html>

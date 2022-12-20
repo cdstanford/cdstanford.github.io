@@ -2,22 +2,18 @@
 
 <html>
     <head>
+        <!-- Metadata -->
         <meta charset="utf-8"/>
         <title> Home |  Caleb Stanford Blog</title>
-        <link rel="stylesheet" href="/style.css" />
         <meta name="description" content="Personal website and blog"/>
         <meta name="author" content="Caleb Stanford"/>
-        <link rel="author" href="humans.txt"/>
+        <link rel="author" href="/humans.txt"/>
 
-        <!-- Facebook comment plugin. Two options for moderation. -->
-        <meta property="fb:app_id" content="340544043003976" />
-        <!-- <meta property="fb:admins" content="10210277106142031"/> -->
-
-        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
-
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/style.css" />
         <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
         <link rel="stylesheet" href="/resources/fontello/css/animation.css">
-        <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" /> -->
 
         <!-- Google Analytics -->
         
@@ -39,7 +35,7 @@
 
     </head>
 
-    <!-- MATHJAX! -->
+    <!-- MathJax -->
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
     <body>
@@ -54,7 +50,7 @@
             <h3>Site</h3>
             <ul>
                 <li><i class="icon-home"></i> <a href="/">Home</a></li>
-                <li><i class="icon-popup"></i> <a href="https://cis.upenn.edu/~castan">Research</a></li>
+                <li><i class="icon-popup"></i> <a href="https://web.cs.ucdavis.edu/~cdstanford/">Research</a></li>
                 <li><i class="icon-user"></i> <a href="/about">About</a></li>
                 <li><i class="icon-trash"></i> <a href="/misc">Miscellaneous</a></li>
             </ul>
@@ -63,7 +59,7 @@
             <ul>
                 <li><i class="icon-tag"></i> <a href="/tags">By tag</a></li>
                 <li><i class="icon-list"></i> <a href="/archive">By date</a></li>
-                <!-- Uncomment if I decide I want rss. -->
+                <!-- RSS -->
                 <!-- <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li> -->
             </ul>
             <!-- <h3>Blog links</h3>
@@ -90,6 +86,33 @@
 	<article>
 
         <header>
+            <h2><a href="/2016/10/25/moving-to-canada/">"I'm moving to Canada"</a></h2>
+            <span class="date"><i class="icon-clock"></i><time datetime="2016-10-25">Oct 25, 2016</time></span><br/>
+            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
+            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
+			<!-- Tags -->
+			<span class="tags"><i class="icon-tag"></i>
+				
+				<a href="/tags/politics">politics</a> <!-- no # in the link for now -->
+				<!-- <a href="tags/#politics">politics</a> --> <!-- getting this to work would be most ideal -->
+				
+			</span>
+        </header>
+
+		<div class="entry"><p>“If Donald Trump wins this election, I’m moving to Canada.”</p>
+
+<p>According to <a href="http://www.businessinsider.com/poll-half-republicans-reject-rigged-election-clinton-wins-2016-10">a recent poll</a>, Democrats are three times as likely to say they would leave the country if their candidate loses.</p>
+
+<p><em>Sanity check: <a href="https://www.google.com/trends/explore?date=all&amp;q=move%20to%20canada,moving%20to%20canada">Google searches for moving to canada</a> do seem to have strong political correlation – the huge spikes occur at Bush’s reelection in 2004,
+and at Super Tuesday in the 2016 primaries. But the consensus from <a href="http://www.npr.org/2016/03/30/472279572/do-americans-actually-follow-through-on-election-threats-to-move-to-canada">articles</a> <a href="http://www.politifact.com/truth-o-meter/article/2016/apr/28/so-you-want-move-canada-eh/">on the</a> <a href="https://www.washingtonpost.com/posteverything/wp/2016/03/02/you-may-think-youll-move-if-trump-wins-but-heres-why-you-wont-really-do-it/?utm_term=.2109e24dc7d3">subject</a> is that that actual moves to Canada do not really go up.</em></p>
+
+</div>
+
+	</article>
+
+	<article>
+
+        <header>
             <h2><a href="/2016/10/17/comment-system/">Day 2&#58; Facebook comments</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="2016-10-17">Oct 17, 2016</time></span><br/>
             <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
@@ -101,20 +124,6 @@
 				<!-- <a href="tags/#this-blog">this-blog</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2016/10/17/comment-system/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2016/10/17/comment-system/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><p>I set up this blog to work with Facebook comments, using the advice <a href="https://joshuacox.github.io/jekyll/2015/11/28/facebook-comments-and-jekyll/">here</a>.
@@ -127,21 +136,6 @@ and I get the feeling it’s not just me. On the other hand, their interface see
 <p>The upshot is that while Facebook comments are set up and hopefully work (test them out below!), that could be a mistake on my part and may change soon.
 I’m not really expecting too many comments in the meantime.</p>
 </div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/10/17/comment-system/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
 
 	</article>
 
@@ -159,20 +153,6 @@ I’m not really expecting too many comments in the meantime.</p>
 				<!-- <a href="tags/#this-blog">this-blog</a> --> <!-- getting this to work would be most ideal -->
 				
 			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2016/10/16/first-post/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2016/10/16/first-post/>0</span></a></span> -->
-
         </header>
 
 		<div class="entry"><p>Today, October 16, 2016, marks the day I finally get a simple website and blog up and running. :)
@@ -201,81 +181,6 @@ I used <a href="https://github.com/maciakl/Sample-Jekyll-Site">this GitHub repos
 </ol>
 </div>
 
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/10/16/first-post/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
-	</article>
-
-	<article>
-
-        <header>
-            <h2><a href="/2016/02/16/a-cute-ultrafilter-problem/">A cute ultrafilter problem (copied from WordPress)</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="2016-02-16">Feb 16, 2016</time></span><br/>
-            <!-- <span class="category"><i class="icon-tag"></i> </span><br/> -->
-            <!-- <span class="author"><i class="icon-user"></i> Caleb Stanford</span><br/> --> <!-- Uncomment if I ever decide I want categories -->
-			<!-- Tags -->
-			<span class="tags"><i class="icon-tag"></i>
-				
-				<a href="/tags/math">math</a> <!-- no # in the link for now -->
-				<!-- <a href="tags/#math">math</a> --> <!-- getting this to work would be most ideal -->
-				
-			</span>
-			<!-- Facebook comments count. -->
-			<!-- Being stupid. Disabling for now. -->
-			<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-			<span class="comments"><i class="icon-comment"></i>  Comments:
-		 	<a href="http://cdstanford.github.io/2016/02/16/a-cute-ultrafilter-problem/"><span class="fb-comments-count" data-href=http://cdstanford.github.io/2016/02/16/a-cute-ultrafilter-problem/>0</span></a></span> -->
-
-        </header>
-
-		<div class="entry"><p><em>Note: This post is copied over from an old WordPress blog, with two posts. The posts were moved here on June 23, 2018.</em></p>
-
-<blockquote>
-  <p>Let \(X\) be a set, and let \(\mathcal{U}\) be a family of subsets of \(X\). Prove that \(\mathcal{U}\) is an ultrafilter on \(X\) if and only if for every partition of \(X\) into three sets \(S_1\), \(S_2\), and \(S_3\), exactly one \(S_i\) lies in \(\mathcal{U}\).</p>
-</blockquote>
-
-<p>The point, I guess, is that the most fundamental property of ultrafilters is their ability to select one set out of any partition to be “significant” and declare the rest unimportant. This matches the intuition of an ultrafilter being a “perfect locating scheme” (Wikipedia). Except for the very surprising fact that it really only needs to be a perfect scheme; the “locating” part is implied!</p>
-
-<p>Of course, a disadvantage of defining ultrafilters in this way is that I can’t come up with any analogous definition of a filter. Filters, being imperfect locating schemes, need to be explicitly specified to be closed under intersection and so on.</p>
-
-<p><em>Thanks to Marion Scheepers for the math problem (a variant of what I presented above).</em></p>
-</div>
-
-		<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=340544043003976";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-        
-          <h4>Comments</h4>
-
-          <div class="fb-comments" data-href="http://cdstanford.github.io/2016/02/16/a-cute-ultrafilter-problem/" data-colorscheme="light" data-num-posts="5" data-width="706"></div>
-         -->
-
 	</article>
 
 
@@ -300,12 +205,6 @@ I used <a href="https://github.com/maciakl/Sample-Jekyll-Site">this GitHub repos
 
         </main>
 
-        <footer>
-            <hr />
-            <!-- <p>Caleb Stanford, <time>2017</time>.</p> -->
-        </footer>
-
-        <script src="/scripts.js"></script>
     </body>
 
 </html>
